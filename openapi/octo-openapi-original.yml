@@ -19827,14 +19827,6 @@ externalDocs:
   url: https://docs.octo.travel/
   description: OCTO Developer Hub
 tags:
-  - name: Supplier
-    externalDocs:
-      url: https://docs.octo.travel/octo-core/supplier
-      description: Docs
-  - name: Products
-    externalDocs:
-      description: Docs
-      url: https://docs.octo.travel/octo-core/products
   - name: Availability
     externalDocs:
       url: https://docs.octo.travel/octo-core/availability
@@ -19843,3 +19835,11 @@ tags:
       description: Docs
       url: https://docs.octo.travel/octo-core/bookings
     name: Bookings
+  - name: Products
+    externalDocs:
+      description: Docs
+      url: https://docs.octo.travel/octo-core/products
+  - name: Supplier
+    externalDocs:
+      url: https://docs.octo.travel/octo-core/supplier
+      description: Docs
