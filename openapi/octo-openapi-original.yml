@@ -1,6 +1,6 @@
 openapi: 3.1.0
 info:
-  title: OCTO API Specification
+  title: Open Connectivity for Tours, Activities, and Attractions OCTO API Specification
   version: '1.0'
   contact:
     email: sayhello@octo.travel
@@ -15,7 +15,7 @@ servers:
 paths:
   /supplier:
     get:
-      summary: Get Supplier
+      summary: Open Connectivity for Tours, Activities, and Attractions Get Supplier
       tags:
         - Supplier
       responses:
@@ -31,19 +31,19 @@ paths:
                     name: Edin Explore
                     endpoint: https://api.ventrata.com/api-octo
                     contact:
-                      website: null
+                      website:
                       email: support@ventrata.com
-                      telephone: null
+                      telephone:
                       address: Marble Arch, London, W1H 7EJ, United Kingdom
                 examples:
                   - id: 48b4d2e9-cd8b-4ac2-a5ee-4217bf2622c2
                     name: John Doe's company
                     endpoint: http://example.com
                     contact:
-                      website: null
+                      website:
                       email: john.doe@email.com
-                      telephone: null
-                      address: null
+                      telephone:
+                      address:
                 properties:
                   id:
                     type: string
@@ -100,7 +100,7 @@ paths:
       description: Returns the supplier and associated contact details.
   /products:
     get:
-      summary: Get Products
+      summary: Open Connectivity for Tours, Activities, and Attractions Get Products
       tags:
         - Products
       responses:
@@ -116,7 +116,7 @@ paths:
                     example-1:
                       id: 28ca088b-bc7b-4746-ab06-5971f1ed5a5e
                       internalName: Edinburgh Hop-On Hop-Off Bus Tour
-                      reference: null
+                      reference:
                       locale: en
                       timeZone: Europe/London
                       allowFreesale: true
@@ -290,7 +290,7 @@ paths:
                             id: DEFAULT
                             default: true
                             internalName: DEFAULT
-                            reference: null
+                            reference:
                             availabilityLocalStartTimes:
                               - '00:00'
                             cancellationCutoff: 1 hour
@@ -402,7 +402,7 @@ paths:
                                 maxUnits: 9
                             description: An object containing a fixed list of restrictions for booking the option.
                             examples:
-                              - minUnits: null
+                              - minUnits:
                                 maxUnits: 10
                             properties:
                               minUnits:
@@ -429,7 +429,7 @@ paths:
                                 example-1:
                                   id: unit_c1709f42-297e-4f7e-bd6b-3e77d4622d8a
                                   internalName: Adult
-                                  reference: null
+                                  reference:
                                   type: ADULT
                                   requiredContactFields: []
                               examples:
@@ -509,7 +509,7 @@ paths:
                                       maxAge: 100
                                       idRequired: false
                                       minQuantity: 1
-                                      maxQuantity: null
+                                      maxQuantity:
                                       paxCount: 4
                                       accompaniedBy: []
                                   description: unit restrictions
@@ -601,7 +601,7 @@ paths:
       description: Fetch the list of products.
   /products/{id}:
     get:
-      summary: Get Product
+      summary: Open Connectivity for Tours, Activities, and Attractions Get Product
       tags:
         - Products
       parameters:
@@ -622,7 +622,7 @@ paths:
                   example-1:
                     id: 28ca088b-bc7b-4746-ab06-5971f1ed5a5e
                     internalName: Edinburgh Hop-On Hop-Off Bus Tour
-                    reference: null
+                    reference:
                     locale: en
                     timeZone: Europe/London
                     allowFreesale: true
@@ -796,7 +796,7 @@ paths:
                           id: DEFAULT
                           default: true
                           internalName: DEFAULT
-                          reference: null
+                          reference:
                           availabilityLocalStartTimes:
                             - '00:00'
                           cancellationCutoff: 1 hour
@@ -908,7 +908,7 @@ paths:
                               maxUnits: 9
                           description: An object containing a fixed list of restrictions for booking the option.
                           examples:
-                            - minUnits: null
+                            - minUnits:
                               maxUnits: 10
                           properties:
                             minUnits:
@@ -935,7 +935,7 @@ paths:
                               example-1:
                                 id: unit_c1709f42-297e-4f7e-bd6b-3e77d4622d8a
                                 internalName: Adult
-                                reference: null
+                                reference:
                                 type: ADULT
                                 requiredContactFields: []
                             examples:
@@ -1015,7 +1015,7 @@ paths:
                                     maxAge: 100
                                     idRequired: false
                                     minQuantity: 1
-                                    maxQuantity: null
+                                    maxQuantity:
                                     paxCount: 4
                                     accompaniedBy: []
                                 description: unit restrictions
@@ -1107,7 +1107,7 @@ paths:
       description: Fetch the product for the given id.
   /availability/calendar:
     post:
-      summary: Availability Calendar
+      summary: Open Connectivity for Tours, Activities, and Attractions Availability Calendar
       tags:
         - Availability
       responses:
@@ -1125,7 +1125,7 @@ paths:
                       available: false
                       status: CLOSED
                       vacancies: 0
-                      capacity: null
+                      capacity:
                       openingHours:
                         - from: '08:00'
                           to: '18:30'
@@ -1238,24 +1238,24 @@ paths:
                     - localDate: '2022-06-14'
                       available: true
                       status: FREESALE
-                      vacancies: null
-                      capacity: null
+                      vacancies:
+                      capacity:
                       openingHours:
                         - from: '09:00'
                           to: '17:00'
                     - localDate: '2022-06-15'
                       available: true
                       status: FREESALE
-                      vacancies: null
-                      capacity: null
+                      vacancies:
+                      capacity:
                       openingHours:
                         - from: '09:00'
                           to: '17:00'
                     - localDate: '2022-06-16'
                       available: true
                       status: FREESALE
-                      vacancies: null
-                      capacity: null
+                      vacancies:
+                      capacity:
                       openingHours:
                         - from: '09:00'
                           to: '17:00'
@@ -1364,7 +1364,7 @@ paths:
         When the end user selects an open date you can call on `/availability` endpoint to get the `availabilityId` to create the booking.
   /availability:
     post:
-      summary: Availability Check
+      summary: Open Connectivity for Tours, Activities, and Attractions Availability Check
       tags:
         - Availability
       responses:
@@ -1384,8 +1384,8 @@ paths:
                       allDay: true
                       available: true
                       status: FREESALE
-                      vacancies: null
-                      capacity: null
+                      vacancies:
+                      capacity:
                       maxUnits: 9
                       utcCutoffAt: '2022-05-22T23:00:00Z'
                       openingHours:
@@ -1398,9 +1398,9 @@ paths:
                       allDay: true
                       available: true
                       status: FREESALE
-                      vacancies: null
-                      capacity: null
-                      maxUnits: null
+                      vacancies:
+                      capacity:
+                      maxUnits:
                       utcCutoffAt: '2022-06-29T22:00:00Z'
                       openingHours:
                         - from: '09:00'
@@ -1413,7 +1413,7 @@ paths:
                       status: AVAILABLE
                       vacancies: 10
                       capacity: 10
-                      maxUnits: null
+                      maxUnits:
                       utcCutoffAt: '2022-06-30T10:00:00Z'
                       openingHours: []
                   title: ''
@@ -1527,9 +1527,9 @@ paths:
                       allDay: true
                       available: true
                       status: FREESALE
-                      vacancies: null
-                      capacity: null
-                      maxUnits: null
+                      vacancies:
+                      capacity:
+                      maxUnits:
                       utcCutoffAt: '2022-06-29T22:00:00Z'
                       openingHours:
                         - from: '09:00'
@@ -1544,7 +1544,7 @@ paths:
                       status: AVAILABLE
                       vacancies: 10
                       capacity: 10
-                      maxUnits: null
+                      maxUnits:
                       utcCutoffAt: '2022-06-30T10:00:00Z'
                       openingHours: []
                     - id: '2022-06-30T14:00:00+01:00'
@@ -1555,7 +1555,7 @@ paths:
                       status: AVAILABLE
                       vacancies: 10
                       capacity: 10
-                      maxUnits: null
+                      maxUnits:
                       utcCutoffAt: '2022-06-30T12:00:00Z'
                       openingHours: []
         '400':
@@ -1674,7 +1674,7 @@ paths:
         - `availabilityIds`
   /bookings:
     post:
-      summary: Booking Reservation
+      summary: Open Connectivity for Tours, Activities, and Attractions Booking Reservation
       tags:
         - Bookings
       operationId: post-bookings
@@ -1695,8 +1695,8 @@ paths:
                     status: CONFIRMED
                     utcCreatedAt: '2021-10-27T23:28:43Z'
                     utcUpdatedAt: '2021-10-27T23:28:45Z'
-                    utcExpiresAt: null
-                    utcRedeemedAt: null
+                    utcExpiresAt:
+                    utcRedeemedAt:
                     utcConfirmedAt: '2021-10-27T23:28:45Z'
                     productId: 5379ce46-0620-42ce-b65c-70d6fc1c9ac2
                 examples: []
@@ -1786,7 +1786,7 @@ paths:
                       example-1:
                         id: 28ca088b-bc7b-4746-ab06-5971f1ed5a5e
                         internalName: Edinburgh Hop-On Hop-Off Bus Tour
-                        reference: null
+                        reference:
                         locale: en
                         timeZone: Europe/London
                         allowFreesale: true
@@ -1960,7 +1960,7 @@ paths:
                               id: DEFAULT
                               default: true
                               internalName: DEFAULT
-                              reference: null
+                              reference:
                               availabilityLocalStartTimes:
                                 - '00:00'
                               cancellationCutoff: 1 hour
@@ -2072,7 +2072,7 @@ paths:
                                   maxUnits: 9
                               description: An object containing a fixed list of restrictions for booking the option.
                               examples:
-                                - minUnits: null
+                                - minUnits:
                                   maxUnits: 10
                               properties:
                                 minUnits:
@@ -2099,7 +2099,7 @@ paths:
                                   example-1:
                                     id: unit_c1709f42-297e-4f7e-bd6b-3e77d4622d8a
                                     internalName: Adult
-                                    reference: null
+                                    reference:
                                     type: ADULT
                                     requiredContactFields: []
                                 examples:
@@ -2179,7 +2179,7 @@ paths:
                                         maxAge: 100
                                         idRequired: false
                                         minQuantity: 1
-                                        maxQuantity: null
+                                        maxQuantity:
                                         paxCount: 4
                                         accompaniedBy: []
                                     description: unit restrictions
@@ -2279,7 +2279,7 @@ paths:
                         id: DEFAULT
                         default: true
                         internalName: DEFAULT
-                        reference: null
+                        reference:
                         availabilityLocalStartTimes:
                           - '00:00'
                         cancellationCutoff: 1 hour
@@ -2391,7 +2391,7 @@ paths:
                             maxUnits: 9
                         description: An object containing a fixed list of restrictions for booking the option.
                         examples:
-                          - minUnits: null
+                          - minUnits:
                             maxUnits: 10
                         properties:
                           minUnits:
@@ -2418,7 +2418,7 @@ paths:
                             example-1:
                               id: unit_c1709f42-297e-4f7e-bd6b-3e77d4622d8a
                               internalName: Adult
-                              reference: null
+                              reference:
                               type: ADULT
                               requiredContactFields: []
                           examples:
@@ -2498,7 +2498,7 @@ paths:
                                   maxAge: 100
                                   idRequired: false
                                   minQuantity: 1
-                                  maxQuantity: null
+                                  maxQuantity:
                                   paxCount: 4
                                   accompaniedBy: []
                               description: unit restrictions
@@ -2659,26 +2659,26 @@ paths:
                     type: object
                     x-examples:
                       example-1:
-                        fullName: null
-                        firstName: null
-                        lastName: null
-                        emailAddress: null
-                        phoneNumber: null
+                        fullName:
+                        firstName:
+                        lastName:
+                        emailAddress:
+                        phoneNumber:
                         locales: []
-                        postalCode: null
-                        country: null
-                        notes: null
+                        postalCode:
+                        country:
+                        notes:
                     examples:
                       - fullName: John Doe
                         firstName: John
                         lastName: Doe
                         emailAddress: johndoe@email.com
-                        phoneNumber: null
+                        phoneNumber:
                         locales:
                           - en
-                        postalCode: null
-                        country: null
-                        notes: null
+                        postalCode:
+                        country:
+                        notes:
                     description: Contact details for the guests that will attend the tour/attraction. Contact schema can be applied to both the booking object (the main reservation) or the unit object (individual ticket holders - if the supplier requires this information)
                     properties:
                       fullName:
@@ -2761,7 +2761,7 @@ paths:
                         x-examples:
                           example-1:
                             redemptionMethod: DIGITAL
-                            utcRedeemedAt: null
+                            utcRedeemedAt:
                             deliveryOptions:
                               - deliveryFormat: QRCODE
                                 deliveryValue: '!1|El3f0wUmcnrEmviMcR9qwqC9hvfrcWc6cZcRcrcR|yrirfZfqHPj40mvhpw2XzX|q7FF77QqFD7fDhr9'
@@ -2769,7 +2769,7 @@ paths:
                                 deliveryValue: https://api.ventrata.com/octo/pdf?booking=36d2d844-121d-453c-b514-de027caaf27f&ticket=72419a19-c58c-46a0-b316-13509de43909
                         examples:
                           - redemptionMethod: DIGITAL
-                            utcRedeemedAt: null
+                            utcRedeemedAt:
                             deliveryOptions:
                               - deliveryFormat: QRCODE
                                 deliveryValue: string
@@ -2867,7 +2867,7 @@ paths:
                             example-1:
                               id: unit_c1709f42-297e-4f7e-bd6b-3e77d4622d8a
                               internalName: Adult
-                              reference: null
+                              reference:
                               type: ADULT
                               requiredContactFields: []
                           examples:
@@ -2947,7 +2947,7 @@ paths:
                                   maxAge: 100
                                   idRequired: false
                                   minQuantity: 1
-                                  maxQuantity: null
+                                  maxQuantity:
                                   paxCount: 4
                                   accompaniedBy: []
                               description: unit restrictions
@@ -3043,26 +3043,26 @@ paths:
                           type: object
                           x-examples:
                             example-1:
-                              fullName: null
-                              firstName: null
-                              lastName: null
-                              emailAddress: null
-                              phoneNumber: null
+                              fullName:
+                              firstName:
+                              lastName:
+                              emailAddress:
+                              phoneNumber:
                               locales: []
-                              postalCode: null
-                              country: null
-                              notes: null
+                              postalCode:
+                              country:
+                              notes:
                           examples:
                             - fullName: John Doe
                               firstName: John
                               lastName: Doe
                               emailAddress: johndoe@email.com
-                              phoneNumber: null
+                              phoneNumber:
                               locales:
                                 - en
-                              postalCode: null
-                              country: null
-                              notes: null
+                              postalCode:
+                              country:
+                              notes:
                           description: Contact details for the guests that will attend the tour/attraction. Contact schema can be applied to both the booking object (the main reservation) or the unit object (individual ticket holders - if the supplier requires this information)
                           properties:
                             fullName:
@@ -3122,7 +3122,7 @@ paths:
                               x-examples:
                                 example-1:
                                   redemptionMethod: DIGITAL
-                                  utcRedeemedAt: null
+                                  utcRedeemedAt:
                                   deliveryOptions:
                                     - deliveryFormat: QRCODE
                                       deliveryValue: '!1|El3f0wUmcnrEmviMcR9qwqC9hvfrcWc6cZcRcrcR|yrirfZfqHPj40mvhpw2XzX|q7FF77QqFD7fDhr9'
@@ -3130,7 +3130,7 @@ paths:
                                       deliveryValue: https://api.ventrata.com/octo/pdf?booking=36d2d844-121d-453c-b514-de027caaf27f&ticket=72419a19-c58c-46a0-b316-13509de43909
                               examples:
                                 - redemptionMethod: DIGITAL
-                                  utcRedeemedAt: null
+                                  utcRedeemedAt:
                                   deliveryOptions:
                                     - deliveryFormat: QRCODE
                                       deliveryValue: string
@@ -3209,7 +3209,7 @@ paths:
                           unit:
                             id: string
                             internalName: string
-                            reference: null
+                            reference:
                             type: ADULT
                             requiredContactFields:
                               - firstName
@@ -3218,25 +3218,25 @@ paths:
                               maxAge: 99
                               idRequired: false
                               minQuantity: 0
-                              maxQuantity: null
+                              maxQuantity:
                               paxCount: 0
                               accompaniedBy: []
                           status: CONFIRMED
-                          utcRedeemedAt: null
+                          utcRedeemedAt:
                           contact:
                             fullName: John Doe
                             firstName: John
                             lastName: Doe
-                            emailAddress: null
-                            phoneNumber: null
+                            emailAddress:
+                            phoneNumber:
                             locales:
                               - en
-                            postalCode: null
-                            country: null
-                            notes: null
+                            postalCode:
+                            country:
+                            notes:
                           ticket:
                             redemptionMethod: DIGITAL
-                            utcRedeemedAt: null
+                            utcRedeemedAt:
                             deliveryOptions:
                               - deliveryFormat: QRCODE
                                 deliveryValue: string
@@ -3271,19 +3271,19 @@ paths:
                     id: 602a9fdf-5c79-4984-9474-7e14da9b6027
                     uuid: a88b4b8d-9c3b-4a09-ba27-323b43af57e4
                     testMode: true
-                    resellerReference: null
+                    resellerReference:
                     supplierReference: XOPSUT
                     status: ON_HOLD
                     utcCreatedAt: '2022-05-25T10:34:22Z'
                     utcUpdatedAt: '2022-05-25T10:34:22Z'
                     utcExpiresAt: '2022-05-25T11:04:22Z'
-                    utcRedeemedAt: null
-                    utcConfirmedAt: null
+                    utcRedeemedAt:
+                    utcConfirmedAt:
                     productId: '1'
                     product:
                       id: '1'
                       internalName: PPU | OH
-                      reference: null
+                      reference:
                       locale: en
                       timeZone: Europe/London
                       allowFreesale: false
@@ -3302,7 +3302,7 @@ paths:
                         - id: DEFAULT
                           default: true
                           internalName: DEFAULT
-                          reference: null
+                          reference:
                           availabilityLocalStartTimes:
                             - '00:00'
                           cancellationCutoff: 0 hours
@@ -3311,7 +3311,7 @@ paths:
                           requiredContactFields: []
                           restrictions:
                             minUnits: 0
-                            maxUnits: null
+                            maxUnits:
                           units:
                             - id: adult
                               internalName: adult
@@ -3322,8 +3322,8 @@ paths:
                                 minAge: 18
                                 maxAge: 100
                                 idRequired: false
-                                minQuantity: null
-                                maxQuantity: null
+                                minQuantity:
+                                maxQuantity:
                                 paxCount: 1
                                 accompaniedBy: []
                     optionId: DEFAULT
@@ -3331,7 +3331,7 @@ paths:
                       id: DEFAULT
                       default: true
                       internalName: DEFAULT
-                      reference: null
+                      reference:
                       availabilityLocalStartTimes:
                         - '00:00'
                       cancellationCutoff: 0 hours
@@ -3340,7 +3340,7 @@ paths:
                       requiredContactFields: []
                       restrictions:
                         minUnits: 0
-                        maxUnits: null
+                        maxUnits:
                       units:
                         - id: adult
                           internalName: adult
@@ -3351,12 +3351,12 @@ paths:
                             minAge: 18
                             maxAge: 100
                             idRequired: false
-                            minQuantity: null
-                            maxQuantity: null
+                            minQuantity:
+                            maxQuantity:
                             paxCount: 1
                             accompaniedBy: []
                     cancellable: true
-                    cancellation: null
+                    cancellation:
                     freesale: false
                     availabilityId: '2022-04-30T00:00:00+01:00'
                     availability:
@@ -3368,25 +3368,25 @@ paths:
                         - from: '09:00'
                           to: '17:00'
                     contact:
-                      fullName: null
-                      firstName: null
-                      lastName: null
-                      emailAddress: null
-                      phoneNumber: null
+                      fullName:
+                      firstName:
+                      lastName:
+                      emailAddress:
+                      phoneNumber:
                       locales: []
-                      country: null
-                      notes: null
-                    notes: null
+                      country:
+                      notes:
+                    notes:
                     deliveryMethods:
                       - TICKET
                       - VOUCHER
                     voucher:
                       redemptionMethod: DIGITAL
-                      utcRedeemedAt: null
+                      utcRedeemedAt:
                       deliveryOptions: []
                     unitItems:
                       - uuid: 6cbd2582-1345-4d8d-8223-ad004beebc1a
-                        resellerReference: null
+                        resellerReference:
                         supplierReference: CBIYWQ
                         unit:
                           id: adult
@@ -3398,25 +3398,25 @@ paths:
                             minAge: 18
                             maxAge: 100
                             idRequired: false
-                            minQuantity: null
-                            maxQuantity: null
+                            minQuantity:
+                            maxQuantity:
                             paxCount: 1
                             accompaniedBy: []
                         unitId: adult
                         status: ON_HOLD
-                        utcRedeemedAt: null
+                        utcRedeemedAt:
                         contact:
-                          fullName: null
-                          firstName: null
-                          lastName: null
-                          emailAddress: null
-                          phoneNumber: null
+                          fullName:
+                          firstName:
+                          lastName:
+                          emailAddress:
+                          phoneNumber:
                           locales: []
-                          country: null
-                          notes: null
+                          country:
+                          notes:
                         ticket:
                           redemptionMethod: DIGITAL
-                          utcRedeemedAt: null
+                          utcRedeemedAt:
                           deliveryOptions: []
         '400':
           description: Example response
@@ -3578,7 +3578,7 @@ paths:
 
         A reserved booking can be confirmed after the customer finalizes their choice on the [/bookings/{uuid}/confirm](docs/octo/branches/main/614d1613b2d70-booking-confirmation) endpoint provided the reservation had not expired.
     get:
-      summary: Get Bookings
+      summary: Open Connectivity for Tours, Activities, and Attractions Get Bookings
       tags:
         - Bookings
       operationId: get-bookings
@@ -3601,8 +3601,8 @@ paths:
                       status: CONFIRMED
                       utcCreatedAt: '2021-10-27T23:28:43Z'
                       utcUpdatedAt: '2021-10-27T23:28:45Z'
-                      utcExpiresAt: null
-                      utcRedeemedAt: null
+                      utcExpiresAt:
+                      utcRedeemedAt:
                       utcConfirmedAt: '2021-10-27T23:28:45Z'
                       productId: 5379ce46-0620-42ce-b65c-70d6fc1c9ac2
                   examples: []
@@ -3692,7 +3692,7 @@ paths:
                         example-1:
                           id: 28ca088b-bc7b-4746-ab06-5971f1ed5a5e
                           internalName: Edinburgh Hop-On Hop-Off Bus Tour
-                          reference: null
+                          reference:
                           locale: en
                           timeZone: Europe/London
                           allowFreesale: true
@@ -3866,7 +3866,7 @@ paths:
                                 id: DEFAULT
                                 default: true
                                 internalName: DEFAULT
-                                reference: null
+                                reference:
                                 availabilityLocalStartTimes:
                                   - '00:00'
                                 cancellationCutoff: 1 hour
@@ -3978,7 +3978,7 @@ paths:
                                     maxUnits: 9
                                 description: An object containing a fixed list of restrictions for booking the option.
                                 examples:
-                                  - minUnits: null
+                                  - minUnits:
                                     maxUnits: 10
                                 properties:
                                   minUnits:
@@ -4005,7 +4005,7 @@ paths:
                                     example-1:
                                       id: unit_c1709f42-297e-4f7e-bd6b-3e77d4622d8a
                                       internalName: Adult
-                                      reference: null
+                                      reference:
                                       type: ADULT
                                       requiredContactFields: []
                                   examples:
@@ -4085,7 +4085,7 @@ paths:
                                           maxAge: 100
                                           idRequired: false
                                           minQuantity: 1
-                                          maxQuantity: null
+                                          maxQuantity:
                                           paxCount: 4
                                           accompaniedBy: []
                                       description: unit restrictions
@@ -4185,7 +4185,7 @@ paths:
                           id: DEFAULT
                           default: true
                           internalName: DEFAULT
-                          reference: null
+                          reference:
                           availabilityLocalStartTimes:
                             - '00:00'
                           cancellationCutoff: 1 hour
@@ -4297,7 +4297,7 @@ paths:
                               maxUnits: 9
                           description: An object containing a fixed list of restrictions for booking the option.
                           examples:
-                            - minUnits: null
+                            - minUnits:
                               maxUnits: 10
                           properties:
                             minUnits:
@@ -4324,7 +4324,7 @@ paths:
                               example-1:
                                 id: unit_c1709f42-297e-4f7e-bd6b-3e77d4622d8a
                                 internalName: Adult
-                                reference: null
+                                reference:
                                 type: ADULT
                                 requiredContactFields: []
                             examples:
@@ -4404,7 +4404,7 @@ paths:
                                     maxAge: 100
                                     idRequired: false
                                     minQuantity: 1
-                                    maxQuantity: null
+                                    maxQuantity:
                                     paxCount: 4
                                     accompaniedBy: []
                                 description: unit restrictions
@@ -4565,26 +4565,26 @@ paths:
                       type: object
                       x-examples:
                         example-1:
-                          fullName: null
-                          firstName: null
-                          lastName: null
-                          emailAddress: null
-                          phoneNumber: null
+                          fullName:
+                          firstName:
+                          lastName:
+                          emailAddress:
+                          phoneNumber:
                           locales: []
-                          postalCode: null
-                          country: null
-                          notes: null
+                          postalCode:
+                          country:
+                          notes:
                       examples:
                         - fullName: John Doe
                           firstName: John
                           lastName: Doe
                           emailAddress: johndoe@email.com
-                          phoneNumber: null
+                          phoneNumber:
                           locales:
                             - en
-                          postalCode: null
-                          country: null
-                          notes: null
+                          postalCode:
+                          country:
+                          notes:
                       description: Contact details for the guests that will attend the tour/attraction. Contact schema can be applied to both the booking object (the main reservation) or the unit object (individual ticket holders - if the supplier requires this information)
                       properties:
                         fullName:
@@ -4667,7 +4667,7 @@ paths:
                           x-examples:
                             example-1:
                               redemptionMethod: DIGITAL
-                              utcRedeemedAt: null
+                              utcRedeemedAt:
                               deliveryOptions:
                                 - deliveryFormat: QRCODE
                                   deliveryValue: '!1|El3f0wUmcnrEmviMcR9qwqC9hvfrcWc6cZcRcrcR|yrirfZfqHPj40mvhpw2XzX|q7FF77QqFD7fDhr9'
@@ -4675,7 +4675,7 @@ paths:
                                   deliveryValue: https://api.ventrata.com/octo/pdf?booking=36d2d844-121d-453c-b514-de027caaf27f&ticket=72419a19-c58c-46a0-b316-13509de43909
                           examples:
                             - redemptionMethod: DIGITAL
-                              utcRedeemedAt: null
+                              utcRedeemedAt:
                               deliveryOptions:
                                 - deliveryFormat: QRCODE
                                   deliveryValue: string
@@ -4773,7 +4773,7 @@ paths:
                               example-1:
                                 id: unit_c1709f42-297e-4f7e-bd6b-3e77d4622d8a
                                 internalName: Adult
-                                reference: null
+                                reference:
                                 type: ADULT
                                 requiredContactFields: []
                             examples:
@@ -4853,7 +4853,7 @@ paths:
                                     maxAge: 100
                                     idRequired: false
                                     minQuantity: 1
-                                    maxQuantity: null
+                                    maxQuantity:
                                     paxCount: 4
                                     accompaniedBy: []
                                 description: unit restrictions
@@ -4949,26 +4949,26 @@ paths:
                             type: object
                             x-examples:
                               example-1:
-                                fullName: null
-                                firstName: null
-                                lastName: null
-                                emailAddress: null
-                                phoneNumber: null
+                                fullName:
+                                firstName:
+                                lastName:
+                                emailAddress:
+                                phoneNumber:
                                 locales: []
-                                postalCode: null
-                                country: null
-                                notes: null
+                                postalCode:
+                                country:
+                                notes:
                             examples:
                               - fullName: John Doe
                                 firstName: John
                                 lastName: Doe
                                 emailAddress: johndoe@email.com
-                                phoneNumber: null
+                                phoneNumber:
                                 locales:
                                   - en
-                                postalCode: null
-                                country: null
-                                notes: null
+                                postalCode:
+                                country:
+                                notes:
                             description: Contact details for the guests that will attend the tour/attraction. Contact schema can be applied to both the booking object (the main reservation) or the unit object (individual ticket holders - if the supplier requires this information)
                             properties:
                               fullName:
@@ -5028,7 +5028,7 @@ paths:
                                 x-examples:
                                   example-1:
                                     redemptionMethod: DIGITAL
-                                    utcRedeemedAt: null
+                                    utcRedeemedAt:
                                     deliveryOptions:
                                       - deliveryFormat: QRCODE
                                         deliveryValue: '!1|El3f0wUmcnrEmviMcR9qwqC9hvfrcWc6cZcRcrcR|yrirfZfqHPj40mvhpw2XzX|q7FF77QqFD7fDhr9'
@@ -5036,7 +5036,7 @@ paths:
                                         deliveryValue: https://api.ventrata.com/octo/pdf?booking=36d2d844-121d-453c-b514-de027caaf27f&ticket=72419a19-c58c-46a0-b316-13509de43909
                                 examples:
                                   - redemptionMethod: DIGITAL
-                                    utcRedeemedAt: null
+                                    utcRedeemedAt:
                                     deliveryOptions:
                                       - deliveryFormat: QRCODE
                                         deliveryValue: string
@@ -5115,7 +5115,7 @@ paths:
                             unit:
                               id: string
                               internalName: string
-                              reference: null
+                              reference:
                               type: ADULT
                               requiredContactFields:
                                 - firstName
@@ -5124,25 +5124,25 @@ paths:
                                 maxAge: 99
                                 idRequired: false
                                 minQuantity: 0
-                                maxQuantity: null
+                                maxQuantity:
                                 paxCount: 0
                                 accompaniedBy: []
                             status: CONFIRMED
-                            utcRedeemedAt: null
+                            utcRedeemedAt:
                             contact:
                               fullName: John Doe
                               firstName: John
                               lastName: Doe
-                              emailAddress: null
-                              phoneNumber: null
+                              emailAddress:
+                              phoneNumber:
                               locales:
                                 - en
-                              postalCode: null
-                              country: null
-                              notes: null
+                              postalCode:
+                              country:
+                              notes:
                             ticket:
                               redemptionMethod: DIGITAL
-                              utcRedeemedAt: null
+                              utcRedeemedAt:
                               deliveryOptions:
                                 - deliveryFormat: QRCODE
                                   deliveryValue: string
@@ -5177,19 +5177,19 @@ paths:
                     - id: 3ef65048-5ffe-474f-8a5c-fb35a9faa6ed
                       uuid: 814d2566-2c71-4e6a-aaa9-59b9bf26cc0d
                       testMode: true
-                      resellerReference: null
+                      resellerReference:
                       supplierReference: RNSRSM
                       status: CONFIRMED
                       utcCreatedAt: '2022-05-25T11:07:05Z'
                       utcUpdatedAt: '2022-05-25T11:09:32Z'
-                      utcExpiresAt: null
-                      utcRedeemedAt: null
+                      utcExpiresAt:
+                      utcRedeemedAt:
                       utcConfirmedAt: '2022-05-25T11:09:32Z'
                       productId: '1'
                       product:
                         id: '1'
                         internalName: PPU | OH
-                        reference: null
+                        reference:
                         locale: en
                         timeZone: Europe/London
                         allowFreesale: false
@@ -5208,7 +5208,7 @@ paths:
                           - id: DEFAULT
                             default: true
                             internalName: DEFAULT
-                            reference: null
+                            reference:
                             availabilityLocalStartTimes:
                               - '00:00'
                             cancellationCutoff: 0 hours
@@ -5217,7 +5217,7 @@ paths:
                             requiredContactFields: []
                             restrictions:
                               minUnits: 0
-                              maxUnits: null
+                              maxUnits:
                             units:
                               - id: adult
                                 internalName: adult
@@ -5228,8 +5228,8 @@ paths:
                                   minAge: 18
                                   maxAge: 100
                                   idRequired: false
-                                  minQuantity: null
-                                  maxQuantity: null
+                                  minQuantity:
+                                  maxQuantity:
                                   paxCount: 1
                                   accompaniedBy: []
                       optionId: DEFAULT
@@ -5237,7 +5237,7 @@ paths:
                         id: DEFAULT
                         default: true
                         internalName: DEFAULT
-                        reference: null
+                        reference:
                         availabilityLocalStartTimes:
                           - '00:00'
                         cancellationCutoff: 0 hours
@@ -5246,7 +5246,7 @@ paths:
                         requiredContactFields: []
                         restrictions:
                           minUnits: 0
-                          maxUnits: null
+                          maxUnits:
                         units:
                           - id: adult
                             internalName: adult
@@ -5257,12 +5257,12 @@ paths:
                               minAge: 18
                               maxAge: 100
                               idRequired: false
-                              minQuantity: null
-                              maxQuantity: null
+                              minQuantity:
+                              maxQuantity:
                               paxCount: 1
                               accompaniedBy: []
                       cancellable: true
-                      cancellation: null
+                      cancellation:
                       freesale: false
                       availabilityId: '2022-04-30T00:00:00+01:00'
                       availability:
@@ -5276,19 +5276,19 @@ paths:
                       contact:
                         fullName: John
                         firstName: Doe
-                        lastName: null
+                        lastName:
                         emailAddress: john.doe@email.com
-                        phoneNumber: null
+                        phoneNumber:
                         locales: []
-                        country: null
-                        notes: null
-                      notes: null
+                        country:
+                        notes:
+                      notes:
                       deliveryMethods:
                         - TICKET
                         - VOUCHER
                       voucher:
                         redemptionMethod: DIGITAL
-                        utcRedeemedAt: null
+                        utcRedeemedAt:
                         deliveryOptions:
                           - deliveryFormat: PDF_URL
                             deliveryValue: https://api.octomock.com/octo/pdf?booking=814d2566-2c71-4e6a-aaa9-59b9bf26cc0d
@@ -5296,7 +5296,7 @@ paths:
                             deliveryValue: RNSRSM
                       unitItems:
                         - uuid: a204e6de-7909-4bf2-b7a8-2884189534bc
-                          resellerReference: null
+                          resellerReference:
                           supplierReference: 1LTYVC
                           unit:
                             id: adult
@@ -5308,32 +5308,32 @@ paths:
                               minAge: 18
                               maxAge: 100
                               idRequired: false
-                              minQuantity: null
-                              maxQuantity: null
+                              minQuantity:
+                              maxQuantity:
                               paxCount: 1
                               accompaniedBy: []
                           unitId: adult
                           status: ON_HOLD
-                          utcRedeemedAt: null
+                          utcRedeemedAt:
                           contact:
-                            fullName: null
-                            firstName: null
-                            lastName: null
-                            emailAddress: null
-                            phoneNumber: null
+                            fullName:
+                            firstName:
+                            lastName:
+                            emailAddress:
+                            phoneNumber:
                             locales: []
-                            country: null
-                            notes: null
+                            country:
+                            notes:
                           ticket:
                             redemptionMethod: DIGITAL
-                            utcRedeemedAt: null
+                            utcRedeemedAt:
                             deliveryOptions:
                               - deliveryFormat: PDF_URL
                                 deliveryValue: https://api.octomock.com/octo/pdf?booking=814d2566-2c71-4e6a-aaa9-59b9bf26cc0d&ticket=a204e6de-7909-4bf2-b7a8-2884189534bc
                               - deliveryFormat: QRCODE
                                 deliveryValue: 1LTYVC
                         - uuid: 9116e598-6713-4cb5-8ba4-e5b839f7a5d5
-                          resellerReference: null
+                          resellerReference:
                           supplierReference: A89VR8
                           unit:
                             id: adult
@@ -5345,25 +5345,25 @@ paths:
                               minAge: 18
                               maxAge: 100
                               idRequired: false
-                              minQuantity: null
-                              maxQuantity: null
+                              minQuantity:
+                              maxQuantity:
                               paxCount: 1
                               accompaniedBy: []
                           unitId: adult
                           status: ON_HOLD
-                          utcRedeemedAt: null
+                          utcRedeemedAt:
                           contact:
-                            fullName: null
-                            firstName: null
-                            lastName: null
-                            emailAddress: null
-                            phoneNumber: null
+                            fullName:
+                            firstName:
+                            lastName:
+                            emailAddress:
+                            phoneNumber:
                             locales: []
-                            country: null
-                            notes: null
+                            country:
+                            notes:
                           ticket:
                             redemptionMethod: DIGITAL
-                            utcRedeemedAt: null
+                            utcRedeemedAt:
                             deliveryOptions:
                               - deliveryFormat: PDF_URL
                                 deliveryValue: https://api.octomock.com/octo/pdf?booking=814d2566-2c71-4e6a-aaa9-59b9bf26cc0d&ticket=9116e598-6713-4cb5-8ba4-e5b839f7a5d5
@@ -5442,7 +5442,7 @@ paths:
         - `localDateStart` and `localDateEnd`
   /bookings/{uuid}/confirm:
     post:
-      summary: Booking Confirmation
+      summary: Open Connectivity for Tours, Activities, and Attractions Booking Confirmation
       tags:
         - Bookings
       operationId: post-bookings-uuid-confirm
@@ -5463,8 +5463,8 @@ paths:
                     status: CONFIRMED
                     utcCreatedAt: '2021-10-27T23:28:43Z'
                     utcUpdatedAt: '2021-10-27T23:28:45Z'
-                    utcExpiresAt: null
-                    utcRedeemedAt: null
+                    utcExpiresAt:
+                    utcRedeemedAt:
                     utcConfirmedAt: '2021-10-27T23:28:45Z'
                     productId: 5379ce46-0620-42ce-b65c-70d6fc1c9ac2
                 examples: []
@@ -5554,7 +5554,7 @@ paths:
                       example-1:
                         id: 28ca088b-bc7b-4746-ab06-5971f1ed5a5e
                         internalName: Edinburgh Hop-On Hop-Off Bus Tour
-                        reference: null
+                        reference:
                         locale: en
                         timeZone: Europe/London
                         allowFreesale: true
@@ -5728,7 +5728,7 @@ paths:
                               id: DEFAULT
                               default: true
                               internalName: DEFAULT
-                              reference: null
+                              reference:
                               availabilityLocalStartTimes:
                                 - '00:00'
                               cancellationCutoff: 1 hour
@@ -5840,7 +5840,7 @@ paths:
                                   maxUnits: 9
                               description: An object containing a fixed list of restrictions for booking the option.
                               examples:
-                                - minUnits: null
+                                - minUnits:
                                   maxUnits: 10
                               properties:
                                 minUnits:
@@ -5867,7 +5867,7 @@ paths:
                                   example-1:
                                     id: unit_c1709f42-297e-4f7e-bd6b-3e77d4622d8a
                                     internalName: Adult
-                                    reference: null
+                                    reference:
                                     type: ADULT
                                     requiredContactFields: []
                                 examples:
@@ -5947,7 +5947,7 @@ paths:
                                         maxAge: 100
                                         idRequired: false
                                         minQuantity: 1
-                                        maxQuantity: null
+                                        maxQuantity:
                                         paxCount: 4
                                         accompaniedBy: []
                                     description: unit restrictions
@@ -6047,7 +6047,7 @@ paths:
                         id: DEFAULT
                         default: true
                         internalName: DEFAULT
-                        reference: null
+                        reference:
                         availabilityLocalStartTimes:
                           - '00:00'
                         cancellationCutoff: 1 hour
@@ -6159,7 +6159,7 @@ paths:
                             maxUnits: 9
                         description: An object containing a fixed list of restrictions for booking the option.
                         examples:
-                          - minUnits: null
+                          - minUnits:
                             maxUnits: 10
                         properties:
                           minUnits:
@@ -6186,7 +6186,7 @@ paths:
                             example-1:
                               id: unit_c1709f42-297e-4f7e-bd6b-3e77d4622d8a
                               internalName: Adult
-                              reference: null
+                              reference:
                               type: ADULT
                               requiredContactFields: []
                           examples:
@@ -6266,7 +6266,7 @@ paths:
                                   maxAge: 100
                                   idRequired: false
                                   minQuantity: 1
-                                  maxQuantity: null
+                                  maxQuantity:
                                   paxCount: 4
                                   accompaniedBy: []
                               description: unit restrictions
@@ -6427,26 +6427,26 @@ paths:
                     type: object
                     x-examples:
                       example-1:
-                        fullName: null
-                        firstName: null
-                        lastName: null
-                        emailAddress: null
-                        phoneNumber: null
+                        fullName:
+                        firstName:
+                        lastName:
+                        emailAddress:
+                        phoneNumber:
                         locales: []
-                        postalCode: null
-                        country: null
-                        notes: null
+                        postalCode:
+                        country:
+                        notes:
                     examples:
                       - fullName: John Doe
                         firstName: John
                         lastName: Doe
                         emailAddress: johndoe@email.com
-                        phoneNumber: null
+                        phoneNumber:
                         locales:
                           - en
-                        postalCode: null
-                        country: null
-                        notes: null
+                        postalCode:
+                        country:
+                        notes:
                     description: Contact details for the guests that will attend the tour/attraction. Contact schema can be applied to both the booking object (the main reservation) or the unit object (individual ticket holders - if the supplier requires this information)
                     properties:
                       fullName:
@@ -6529,7 +6529,7 @@ paths:
                         x-examples:
                           example-1:
                             redemptionMethod: DIGITAL
-                            utcRedeemedAt: null
+                            utcRedeemedAt:
                             deliveryOptions:
                               - deliveryFormat: QRCODE
                                 deliveryValue: '!1|El3f0wUmcnrEmviMcR9qwqC9hvfrcWc6cZcRcrcR|yrirfZfqHPj40mvhpw2XzX|q7FF77QqFD7fDhr9'
@@ -6537,7 +6537,7 @@ paths:
                                 deliveryValue: https://api.ventrata.com/octo/pdf?booking=36d2d844-121d-453c-b514-de027caaf27f&ticket=72419a19-c58c-46a0-b316-13509de43909
                         examples:
                           - redemptionMethod: DIGITAL
-                            utcRedeemedAt: null
+                            utcRedeemedAt:
                             deliveryOptions:
                               - deliveryFormat: QRCODE
                                 deliveryValue: string
@@ -6635,7 +6635,7 @@ paths:
                             example-1:
                               id: unit_c1709f42-297e-4f7e-bd6b-3e77d4622d8a
                               internalName: Adult
-                              reference: null
+                              reference:
                               type: ADULT
                               requiredContactFields: []
                           examples:
@@ -6715,7 +6715,7 @@ paths:
                                   maxAge: 100
                                   idRequired: false
                                   minQuantity: 1
-                                  maxQuantity: null
+                                  maxQuantity:
                                   paxCount: 4
                                   accompaniedBy: []
                               description: unit restrictions
@@ -6811,26 +6811,26 @@ paths:
                           type: object
                           x-examples:
                             example-1:
-                              fullName: null
-                              firstName: null
-                              lastName: null
-                              emailAddress: null
-                              phoneNumber: null
+                              fullName:
+                              firstName:
+                              lastName:
+                              emailAddress:
+                              phoneNumber:
                               locales: []
-                              postalCode: null
-                              country: null
-                              notes: null
+                              postalCode:
+                              country:
+                              notes:
                           examples:
                             - fullName: John Doe
                               firstName: John
                               lastName: Doe
                               emailAddress: johndoe@email.com
-                              phoneNumber: null
+                              phoneNumber:
                               locales:
                                 - en
-                              postalCode: null
-                              country: null
-                              notes: null
+                              postalCode:
+                              country:
+                              notes:
                           description: Contact details for the guests that will attend the tour/attraction. Contact schema can be applied to both the booking object (the main reservation) or the unit object (individual ticket holders - if the supplier requires this information)
                           properties:
                             fullName:
@@ -6890,7 +6890,7 @@ paths:
                               x-examples:
                                 example-1:
                                   redemptionMethod: DIGITAL
-                                  utcRedeemedAt: null
+                                  utcRedeemedAt:
                                   deliveryOptions:
                                     - deliveryFormat: QRCODE
                                       deliveryValue: '!1|El3f0wUmcnrEmviMcR9qwqC9hvfrcWc6cZcRcrcR|yrirfZfqHPj40mvhpw2XzX|q7FF77QqFD7fDhr9'
@@ -6898,7 +6898,7 @@ paths:
                                       deliveryValue: https://api.ventrata.com/octo/pdf?booking=36d2d844-121d-453c-b514-de027caaf27f&ticket=72419a19-c58c-46a0-b316-13509de43909
                               examples:
                                 - redemptionMethod: DIGITAL
-                                  utcRedeemedAt: null
+                                  utcRedeemedAt:
                                   deliveryOptions:
                                     - deliveryFormat: QRCODE
                                       deliveryValue: string
@@ -6977,7 +6977,7 @@ paths:
                           unit:
                             id: string
                             internalName: string
-                            reference: null
+                            reference:
                             type: ADULT
                             requiredContactFields:
                               - firstName
@@ -6986,25 +6986,25 @@ paths:
                               maxAge: 99
                               idRequired: false
                               minQuantity: 0
-                              maxQuantity: null
+                              maxQuantity:
                               paxCount: 0
                               accompaniedBy: []
                           status: CONFIRMED
-                          utcRedeemedAt: null
+                          utcRedeemedAt:
                           contact:
                             fullName: John Doe
                             firstName: John
                             lastName: Doe
-                            emailAddress: null
-                            phoneNumber: null
+                            emailAddress:
+                            phoneNumber:
                             locales:
                               - en
-                            postalCode: null
-                            country: null
-                            notes: null
+                            postalCode:
+                            country:
+                            notes:
                           ticket:
                             redemptionMethod: DIGITAL
-                            utcRedeemedAt: null
+                            utcRedeemedAt:
                             deliveryOptions:
                               - deliveryFormat: QRCODE
                                 deliveryValue: string
@@ -7039,19 +7039,19 @@ paths:
                     id: 3ac5450f-8511-4386-9feb-17ce4f9e1f86
                     uuid: ec0ce0c2-03f0-4c64-bbc5-5e0f7d1e1c0a
                     testMode: true
-                    resellerReference: null
+                    resellerReference:
                     supplierReference: ALG6RQ
                     status: CONFIRMED
                     utcCreatedAt: '2022-05-25T11:03:22Z'
                     utcUpdatedAt: '2022-05-25T11:03:31Z'
-                    utcExpiresAt: null
-                    utcRedeemedAt: null
+                    utcExpiresAt:
+                    utcRedeemedAt:
                     utcConfirmedAt: '2022-05-25T11:03:31Z'
                     productId: '1'
                     product:
                       id: '1'
                       internalName: PPU | OH
-                      reference: null
+                      reference:
                       locale: en
                       timeZone: Europe/London
                       allowFreesale: false
@@ -7070,7 +7070,7 @@ paths:
                         - id: DEFAULT
                           default: true
                           internalName: DEFAULT
-                          reference: null
+                          reference:
                           availabilityLocalStartTimes:
                             - '00:00'
                           cancellationCutoff: 0 hours
@@ -7079,7 +7079,7 @@ paths:
                           requiredContactFields: []
                           restrictions:
                             minUnits: 0
-                            maxUnits: null
+                            maxUnits:
                           units:
                             - id: adult
                               internalName: adult
@@ -7090,8 +7090,8 @@ paths:
                                 minAge: 18
                                 maxAge: 100
                                 idRequired: false
-                                minQuantity: null
-                                maxQuantity: null
+                                minQuantity:
+                                maxQuantity:
                                 paxCount: 1
                                 accompaniedBy: []
                     optionId: DEFAULT
@@ -7099,7 +7099,7 @@ paths:
                       id: DEFAULT
                       default: true
                       internalName: DEFAULT
-                      reference: null
+                      reference:
                       availabilityLocalStartTimes:
                         - '00:00'
                       cancellationCutoff: 0 hours
@@ -7108,7 +7108,7 @@ paths:
                       requiredContactFields: []
                       restrictions:
                         minUnits: 0
-                        maxUnits: null
+                        maxUnits:
                       units:
                         - id: adult
                           internalName: adult
@@ -7119,12 +7119,12 @@ paths:
                             minAge: 18
                             maxAge: 100
                             idRequired: false
-                            minQuantity: null
-                            maxQuantity: null
+                            minQuantity:
+                            maxQuantity:
                             paxCount: 1
                             accompaniedBy: []
                     cancellable: true
-                    cancellation: null
+                    cancellation:
                     freesale: false
                     availabilityId: '2022-04-30T00:00:00+01:00'
                     availability:
@@ -7140,17 +7140,17 @@ paths:
                       firstName: John
                       lastName: Doe
                       emailAddress: johndoe@email.com
-                      phoneNumber: null
+                      phoneNumber:
                       locales: []
-                      country: null
-                      notes: null
-                    notes: null
+                      country:
+                      notes:
+                    notes:
                     deliveryMethods:
                       - TICKET
                       - VOUCHER
                     voucher:
                       redemptionMethod: DIGITAL
-                      utcRedeemedAt: null
+                      utcRedeemedAt:
                       deliveryOptions:
                         - deliveryFormat: PDF_URL
                           deliveryValue: https://api.octomock.com/octo/pdf?booking=ec0ce0c2-03f0-4c64-bbc5-5e0f7d1e1c0a
@@ -7158,7 +7158,7 @@ paths:
                           deliveryValue: ALG6RQ
                     unitItems:
                       - uuid: 25ec5429-d563-45f9-ba5b-85b03edbf65e
-                        resellerReference: null
+                        resellerReference:
                         supplierReference: EO6Q0P
                         unit:
                           id: adult
@@ -7170,25 +7170,25 @@ paths:
                             minAge: 18
                             maxAge: 100
                             idRequired: false
-                            minQuantity: null
-                            maxQuantity: null
+                            minQuantity:
+                            maxQuantity:
                             paxCount: 1
                             accompaniedBy: []
                         unitId: adult
                         status: ON_HOLD
-                        utcRedeemedAt: null
+                        utcRedeemedAt:
                         contact:
-                          fullName: null
-                          firstName: null
-                          lastName: null
-                          emailAddress: null
-                          phoneNumber: null
+                          fullName:
+                          firstName:
+                          lastName:
+                          emailAddress:
+                          phoneNumber:
                           locales: []
-                          country: null
-                          notes: null
+                          country:
+                          notes:
                         ticket:
                           redemptionMethod: DIGITAL
-                          utcRedeemedAt: null
+                          utcRedeemedAt:
                           deliveryOptions:
                             - deliveryFormat: PDF_URL
                               deliveryValue: https://api.octomock.com/octo/pdf?booking=ec0ce0c2-03f0-4c64-bbc5-5e0f7d1e1c0a&ticket=25ec5429-d563-45f9-ba5b-85b03edbf65e
@@ -7389,7 +7389,7 @@ paths:
         description: The UUID of the booking
   /bookings/{uuid}/cancel:
     post:
-      summary: Booking Cancellation
+      summary: Open Connectivity for Tours, Activities, and Attractions Booking Cancellation
       tags:
         - Bookings
       operationId: delete-bookings-:uuid
@@ -7410,8 +7410,8 @@ paths:
                     status: CONFIRMED
                     utcCreatedAt: '2021-10-27T23:28:43Z'
                     utcUpdatedAt: '2021-10-27T23:28:45Z'
-                    utcExpiresAt: null
-                    utcRedeemedAt: null
+                    utcExpiresAt:
+                    utcRedeemedAt:
                     utcConfirmedAt: '2021-10-27T23:28:45Z'
                     productId: 5379ce46-0620-42ce-b65c-70d6fc1c9ac2
                 examples: []
@@ -7501,7 +7501,7 @@ paths:
                       example-1:
                         id: 28ca088b-bc7b-4746-ab06-5971f1ed5a5e
                         internalName: Edinburgh Hop-On Hop-Off Bus Tour
-                        reference: null
+                        reference:
                         locale: en
                         timeZone: Europe/London
                         allowFreesale: true
@@ -7675,7 +7675,7 @@ paths:
                               id: DEFAULT
                               default: true
                               internalName: DEFAULT
-                              reference: null
+                              reference:
                               availabilityLocalStartTimes:
                                 - '00:00'
                               cancellationCutoff: 1 hour
@@ -7787,7 +7787,7 @@ paths:
                                   maxUnits: 9
                               description: An object containing a fixed list of restrictions for booking the option.
                               examples:
-                                - minUnits: null
+                                - minUnits:
                                   maxUnits: 10
                               properties:
                                 minUnits:
@@ -7814,7 +7814,7 @@ paths:
                                   example-1:
                                     id: unit_c1709f42-297e-4f7e-bd6b-3e77d4622d8a
                                     internalName: Adult
-                                    reference: null
+                                    reference:
                                     type: ADULT
                                     requiredContactFields: []
                                 examples:
@@ -7894,7 +7894,7 @@ paths:
                                         maxAge: 100
                                         idRequired: false
                                         minQuantity: 1
-                                        maxQuantity: null
+                                        maxQuantity:
                                         paxCount: 4
                                         accompaniedBy: []
                                     description: unit restrictions
@@ -7994,7 +7994,7 @@ paths:
                         id: DEFAULT
                         default: true
                         internalName: DEFAULT
-                        reference: null
+                        reference:
                         availabilityLocalStartTimes:
                           - '00:00'
                         cancellationCutoff: 1 hour
@@ -8106,7 +8106,7 @@ paths:
                             maxUnits: 9
                         description: An object containing a fixed list of restrictions for booking the option.
                         examples:
-                          - minUnits: null
+                          - minUnits:
                             maxUnits: 10
                         properties:
                           minUnits:
@@ -8133,7 +8133,7 @@ paths:
                             example-1:
                               id: unit_c1709f42-297e-4f7e-bd6b-3e77d4622d8a
                               internalName: Adult
-                              reference: null
+                              reference:
                               type: ADULT
                               requiredContactFields: []
                           examples:
@@ -8213,7 +8213,7 @@ paths:
                                   maxAge: 100
                                   idRequired: false
                                   minQuantity: 1
-                                  maxQuantity: null
+                                  maxQuantity:
                                   paxCount: 4
                                   accompaniedBy: []
                               description: unit restrictions
@@ -8374,26 +8374,26 @@ paths:
                     type: object
                     x-examples:
                       example-1:
-                        fullName: null
-                        firstName: null
-                        lastName: null
-                        emailAddress: null
-                        phoneNumber: null
+                        fullName:
+                        firstName:
+                        lastName:
+                        emailAddress:
+                        phoneNumber:
                         locales: []
-                        postalCode: null
-                        country: null
-                        notes: null
+                        postalCode:
+                        country:
+                        notes:
                     examples:
                       - fullName: John Doe
                         firstName: John
                         lastName: Doe
                         emailAddress: johndoe@email.com
-                        phoneNumber: null
+                        phoneNumber:
                         locales:
                           - en
-                        postalCode: null
-                        country: null
-                        notes: null
+                        postalCode:
+                        country:
+                        notes:
                     description: Contact details for the guests that will attend the tour/attraction. Contact schema can be applied to both the booking object (the main reservation) or the unit object (individual ticket holders - if the supplier requires this information)
                     properties:
                       fullName:
@@ -8476,7 +8476,7 @@ paths:
                         x-examples:
                           example-1:
                             redemptionMethod: DIGITAL
-                            utcRedeemedAt: null
+                            utcRedeemedAt:
                             deliveryOptions:
                               - deliveryFormat: QRCODE
                                 deliveryValue: '!1|El3f0wUmcnrEmviMcR9qwqC9hvfrcWc6cZcRcrcR|yrirfZfqHPj40mvhpw2XzX|q7FF77QqFD7fDhr9'
@@ -8484,7 +8484,7 @@ paths:
                                 deliveryValue: https://api.ventrata.com/octo/pdf?booking=36d2d844-121d-453c-b514-de027caaf27f&ticket=72419a19-c58c-46a0-b316-13509de43909
                         examples:
                           - redemptionMethod: DIGITAL
-                            utcRedeemedAt: null
+                            utcRedeemedAt:
                             deliveryOptions:
                               - deliveryFormat: QRCODE
                                 deliveryValue: string
@@ -8582,7 +8582,7 @@ paths:
                             example-1:
                               id: unit_c1709f42-297e-4f7e-bd6b-3e77d4622d8a
                               internalName: Adult
-                              reference: null
+                              reference:
                               type: ADULT
                               requiredContactFields: []
                           examples:
@@ -8662,7 +8662,7 @@ paths:
                                   maxAge: 100
                                   idRequired: false
                                   minQuantity: 1
-                                  maxQuantity: null
+                                  maxQuantity:
                                   paxCount: 4
                                   accompaniedBy: []
                               description: unit restrictions
@@ -8758,26 +8758,26 @@ paths:
                           type: object
                           x-examples:
                             example-1:
-                              fullName: null
-                              firstName: null
-                              lastName: null
-                              emailAddress: null
-                              phoneNumber: null
+                              fullName:
+                              firstName:
+                              lastName:
+                              emailAddress:
+                              phoneNumber:
                               locales: []
-                              postalCode: null
-                              country: null
-                              notes: null
+                              postalCode:
+                              country:
+                              notes:
                           examples:
                             - fullName: John Doe
                               firstName: John
                               lastName: Doe
                               emailAddress: johndoe@email.com
-                              phoneNumber: null
+                              phoneNumber:
                               locales:
                                 - en
-                              postalCode: null
-                              country: null
-                              notes: null
+                              postalCode:
+                              country:
+                              notes:
                           description: Contact details for the guests that will attend the tour/attraction. Contact schema can be applied to both the booking object (the main reservation) or the unit object (individual ticket holders - if the supplier requires this information)
                           properties:
                             fullName:
@@ -8837,7 +8837,7 @@ paths:
                               x-examples:
                                 example-1:
                                   redemptionMethod: DIGITAL
-                                  utcRedeemedAt: null
+                                  utcRedeemedAt:
                                   deliveryOptions:
                                     - deliveryFormat: QRCODE
                                       deliveryValue: '!1|El3f0wUmcnrEmviMcR9qwqC9hvfrcWc6cZcRcrcR|yrirfZfqHPj40mvhpw2XzX|q7FF77QqFD7fDhr9'
@@ -8845,7 +8845,7 @@ paths:
                                       deliveryValue: https://api.ventrata.com/octo/pdf?booking=36d2d844-121d-453c-b514-de027caaf27f&ticket=72419a19-c58c-46a0-b316-13509de43909
                               examples:
                                 - redemptionMethod: DIGITAL
-                                  utcRedeemedAt: null
+                                  utcRedeemedAt:
                                   deliveryOptions:
                                     - deliveryFormat: QRCODE
                                       deliveryValue: string
@@ -8924,7 +8924,7 @@ paths:
                           unit:
                             id: string
                             internalName: string
-                            reference: null
+                            reference:
                             type: ADULT
                             requiredContactFields:
                               - firstName
@@ -8933,25 +8933,25 @@ paths:
                               maxAge: 99
                               idRequired: false
                               minQuantity: 0
-                              maxQuantity: null
+                              maxQuantity:
                               paxCount: 0
                               accompaniedBy: []
                           status: CONFIRMED
-                          utcRedeemedAt: null
+                          utcRedeemedAt:
                           contact:
                             fullName: John Doe
                             firstName: John
                             lastName: Doe
-                            emailAddress: null
-                            phoneNumber: null
+                            emailAddress:
+                            phoneNumber:
                             locales:
                               - en
-                            postalCode: null
-                            country: null
-                            notes: null
+                            postalCode:
+                            country:
+                            notes:
                           ticket:
                             redemptionMethod: DIGITAL
-                            utcRedeemedAt: null
+                            utcRedeemedAt:
                             deliveryOptions:
                               - deliveryFormat: QRCODE
                                 deliveryValue: string
@@ -8986,19 +8986,19 @@ paths:
                     id: 3ac5450f-8511-4386-9feb-17ce4f9e1f86
                     uuid: ec0ce0c2-03f0-4c64-bbc5-5e0f7d1e1c0a
                     testMode: true
-                    resellerReference: null
+                    resellerReference:
                     supplierReference: ALG6RQ
                     status: CANCELLED
                     utcCreatedAt: '2022-05-25T11:03:22Z'
                     utcUpdatedAt: '2022-05-25T11:06:24Z'
-                    utcExpiresAt: null
-                    utcRedeemedAt: null
-                    utcConfirmedAt: null
+                    utcExpiresAt:
+                    utcRedeemedAt:
+                    utcConfirmedAt:
                     productId: '1'
                     product:
                       id: '1'
                       internalName: PPU | OH
-                      reference: null
+                      reference:
                       locale: en
                       timeZone: Europe/London
                       allowFreesale: false
@@ -9017,7 +9017,7 @@ paths:
                         - id: DEFAULT
                           default: true
                           internalName: DEFAULT
-                          reference: null
+                          reference:
                           availabilityLocalStartTimes:
                             - '00:00'
                           cancellationCutoff: 0 hours
@@ -9026,7 +9026,7 @@ paths:
                           requiredContactFields: []
                           restrictions:
                             minUnits: 0
-                            maxUnits: null
+                            maxUnits:
                           units:
                             - id: adult
                               internalName: adult
@@ -9037,8 +9037,8 @@ paths:
                                 minAge: 18
                                 maxAge: 100
                                 idRequired: false
-                                minQuantity: null
-                                maxQuantity: null
+                                minQuantity:
+                                maxQuantity:
                                 paxCount: 1
                                 accompaniedBy: []
                     optionId: DEFAULT
@@ -9046,7 +9046,7 @@ paths:
                       id: DEFAULT
                       default: true
                       internalName: DEFAULT
-                      reference: null
+                      reference:
                       availabilityLocalStartTimes:
                         - '00:00'
                       cancellationCutoff: 0 hours
@@ -9055,7 +9055,7 @@ paths:
                       requiredContactFields: []
                       restrictions:
                         minUnits: 0
-                        maxUnits: null
+                        maxUnits:
                       units:
                         - id: adult
                           internalName: adult
@@ -9066,8 +9066,8 @@ paths:
                             minAge: 18
                             maxAge: 100
                             idRequired: false
-                            minQuantity: null
-                            maxQuantity: null
+                            minQuantity:
+                            maxQuantity:
                             paxCount: 1
                             accompaniedBy: []
                     cancellable: false
@@ -9086,21 +9086,21 @@ paths:
                         - from: '09:00'
                           to: '17:00'
                     contact:
-                      fullName: null
-                      firstName: null
-                      lastName: null
-                      emailAddress: null
-                      phoneNumber: null
+                      fullName:
+                      firstName:
+                      lastName:
+                      emailAddress:
+                      phoneNumber:
                       locales: []
-                      country: null
-                      notes: null
-                    notes: null
+                      country:
+                      notes:
+                    notes:
                     deliveryMethods:
                       - TICKET
                       - VOUCHER
                     voucher:
                       redemptionMethod: DIGITAL
-                      utcRedeemedAt: null
+                      utcRedeemedAt:
                       deliveryOptions: []
                     unitItems: []
         '400':
@@ -9163,7 +9163,7 @@ paths:
           description: Required field on all DELETE requests
   /bookings/{uuid}:
     get:
-      summary: Get Booking
+      summary: Open Connectivity for Tours, Activities, and Attractions Get Booking
       tags:
         - Bookings
       responses:
@@ -9183,8 +9183,8 @@ paths:
                     status: CONFIRMED
                     utcCreatedAt: '2021-10-27T23:28:43Z'
                     utcUpdatedAt: '2021-10-27T23:28:45Z'
-                    utcExpiresAt: null
-                    utcRedeemedAt: null
+                    utcExpiresAt:
+                    utcRedeemedAt:
                     utcConfirmedAt: '2021-10-27T23:28:45Z'
                     productId: 5379ce46-0620-42ce-b65c-70d6fc1c9ac2
                 examples: []
@@ -9274,7 +9274,7 @@ paths:
                       example-1:
                         id: 28ca088b-bc7b-4746-ab06-5971f1ed5a5e
                         internalName: Edinburgh Hop-On Hop-Off Bus Tour
-                        reference: null
+                        reference:
                         locale: en
                         timeZone: Europe/London
                         allowFreesale: true
@@ -9448,7 +9448,7 @@ paths:
                               id: DEFAULT
                               default: true
                               internalName: DEFAULT
-                              reference: null
+                              reference:
                               availabilityLocalStartTimes:
                                 - '00:00'
                               cancellationCutoff: 1 hour
@@ -9560,7 +9560,7 @@ paths:
                                   maxUnits: 9
                               description: An object containing a fixed list of restrictions for booking the option.
                               examples:
-                                - minUnits: null
+                                - minUnits:
                                   maxUnits: 10
                               properties:
                                 minUnits:
@@ -9587,7 +9587,7 @@ paths:
                                   example-1:
                                     id: unit_c1709f42-297e-4f7e-bd6b-3e77d4622d8a
                                     internalName: Adult
-                                    reference: null
+                                    reference:
                                     type: ADULT
                                     requiredContactFields: []
                                 examples:
@@ -9667,7 +9667,7 @@ paths:
                                         maxAge: 100
                                         idRequired: false
                                         minQuantity: 1
-                                        maxQuantity: null
+                                        maxQuantity:
                                         paxCount: 4
                                         accompaniedBy: []
                                     description: unit restrictions
@@ -9767,7 +9767,7 @@ paths:
                         id: DEFAULT
                         default: true
                         internalName: DEFAULT
-                        reference: null
+                        reference:
                         availabilityLocalStartTimes:
                           - '00:00'
                         cancellationCutoff: 1 hour
@@ -9879,7 +9879,7 @@ paths:
                             maxUnits: 9
                         description: An object containing a fixed list of restrictions for booking the option.
                         examples:
-                          - minUnits: null
+                          - minUnits:
                             maxUnits: 10
                         properties:
                           minUnits:
@@ -9906,7 +9906,7 @@ paths:
                             example-1:
                               id: unit_c1709f42-297e-4f7e-bd6b-3e77d4622d8a
                               internalName: Adult
-                              reference: null
+                              reference:
                               type: ADULT
                               requiredContactFields: []
                           examples:
@@ -9986,7 +9986,7 @@ paths:
                                   maxAge: 100
                                   idRequired: false
                                   minQuantity: 1
-                                  maxQuantity: null
+                                  maxQuantity:
                                   paxCount: 4
                                   accompaniedBy: []
                               description: unit restrictions
@@ -10147,26 +10147,26 @@ paths:
                     type: object
                     x-examples:
                       example-1:
-                        fullName: null
-                        firstName: null
-                        lastName: null
-                        emailAddress: null
-                        phoneNumber: null
+                        fullName:
+                        firstName:
+                        lastName:
+                        emailAddress:
+                        phoneNumber:
                         locales: []
-                        postalCode: null
-                        country: null
-                        notes: null
+                        postalCode:
+                        country:
+                        notes:
                     examples:
                       - fullName: John Doe
                         firstName: John
                         lastName: Doe
                         emailAddress: johndoe@email.com
-                        phoneNumber: null
+                        phoneNumber:
                         locales:
                           - en
-                        postalCode: null
-                        country: null
-                        notes: null
+                        postalCode:
+                        country:
+                        notes:
                     description: Contact details for the guests that will attend the tour/attraction. Contact schema can be applied to both the booking object (the main reservation) or the unit object (individual ticket holders - if the supplier requires this information)
                     properties:
                       fullName:
@@ -10249,7 +10249,7 @@ paths:
                         x-examples:
                           example-1:
                             redemptionMethod: DIGITAL
-                            utcRedeemedAt: null
+                            utcRedeemedAt:
                             deliveryOptions:
                               - deliveryFormat: QRCODE
                                 deliveryValue: '!1|El3f0wUmcnrEmviMcR9qwqC9hvfrcWc6cZcRcrcR|yrirfZfqHPj40mvhpw2XzX|q7FF77QqFD7fDhr9'
@@ -10257,7 +10257,7 @@ paths:
                                 deliveryValue: https://api.ventrata.com/octo/pdf?booking=36d2d844-121d-453c-b514-de027caaf27f&ticket=72419a19-c58c-46a0-b316-13509de43909
                         examples:
                           - redemptionMethod: DIGITAL
-                            utcRedeemedAt: null
+                            utcRedeemedAt:
                             deliveryOptions:
                               - deliveryFormat: QRCODE
                                 deliveryValue: string
@@ -10355,7 +10355,7 @@ paths:
                             example-1:
                               id: unit_c1709f42-297e-4f7e-bd6b-3e77d4622d8a
                               internalName: Adult
-                              reference: null
+                              reference:
                               type: ADULT
                               requiredContactFields: []
                           examples:
@@ -10435,7 +10435,7 @@ paths:
                                   maxAge: 100
                                   idRequired: false
                                   minQuantity: 1
-                                  maxQuantity: null
+                                  maxQuantity:
                                   paxCount: 4
                                   accompaniedBy: []
                               description: unit restrictions
@@ -10531,26 +10531,26 @@ paths:
                           type: object
                           x-examples:
                             example-1:
-                              fullName: null
-                              firstName: null
-                              lastName: null
-                              emailAddress: null
-                              phoneNumber: null
+                              fullName:
+                              firstName:
+                              lastName:
+                              emailAddress:
+                              phoneNumber:
                               locales: []
-                              postalCode: null
-                              country: null
-                              notes: null
+                              postalCode:
+                              country:
+                              notes:
                           examples:
                             - fullName: John Doe
                               firstName: John
                               lastName: Doe
                               emailAddress: johndoe@email.com
-                              phoneNumber: null
+                              phoneNumber:
                               locales:
                                 - en
-                              postalCode: null
-                              country: null
-                              notes: null
+                              postalCode:
+                              country:
+                              notes:
                           description: Contact details for the guests that will attend the tour/attraction. Contact schema can be applied to both the booking object (the main reservation) or the unit object (individual ticket holders - if the supplier requires this information)
                           properties:
                             fullName:
@@ -10610,7 +10610,7 @@ paths:
                               x-examples:
                                 example-1:
                                   redemptionMethod: DIGITAL
-                                  utcRedeemedAt: null
+                                  utcRedeemedAt:
                                   deliveryOptions:
                                     - deliveryFormat: QRCODE
                                       deliveryValue: '!1|El3f0wUmcnrEmviMcR9qwqC9hvfrcWc6cZcRcrcR|yrirfZfqHPj40mvhpw2XzX|q7FF77QqFD7fDhr9'
@@ -10618,7 +10618,7 @@ paths:
                                       deliveryValue: https://api.ventrata.com/octo/pdf?booking=36d2d844-121d-453c-b514-de027caaf27f&ticket=72419a19-c58c-46a0-b316-13509de43909
                               examples:
                                 - redemptionMethod: DIGITAL
-                                  utcRedeemedAt: null
+                                  utcRedeemedAt:
                                   deliveryOptions:
                                     - deliveryFormat: QRCODE
                                       deliveryValue: string
@@ -10697,7 +10697,7 @@ paths:
                           unit:
                             id: string
                             internalName: string
-                            reference: null
+                            reference:
                             type: ADULT
                             requiredContactFields:
                               - firstName
@@ -10706,25 +10706,25 @@ paths:
                               maxAge: 99
                               idRequired: false
                               minQuantity: 0
-                              maxQuantity: null
+                              maxQuantity:
                               paxCount: 0
                               accompaniedBy: []
                           status: CONFIRMED
-                          utcRedeemedAt: null
+                          utcRedeemedAt:
                           contact:
                             fullName: John Doe
                             firstName: John
                             lastName: Doe
-                            emailAddress: null
-                            phoneNumber: null
+                            emailAddress:
+                            phoneNumber:
                             locales:
                               - en
-                            postalCode: null
-                            country: null
-                            notes: null
+                            postalCode:
+                            country:
+                            notes:
                           ticket:
                             redemptionMethod: DIGITAL
-                            utcRedeemedAt: null
+                            utcRedeemedAt:
                             deliveryOptions:
                               - deliveryFormat: QRCODE
                                 deliveryValue: string
@@ -10759,19 +10759,19 @@ paths:
                     id: 3ac5450f-8511-4386-9feb-17ce4f9e1f86
                     uuid: ec0ce0c2-03f0-4c64-bbc5-5e0f7d1e1c0a
                     testMode: true
-                    resellerReference: null
+                    resellerReference:
                     supplierReference: ALG6RQ
                     status: CONFIRMED
                     utcCreatedAt: '2022-05-25T11:03:22Z'
                     utcUpdatedAt: '2022-05-25T11:03:31Z'
-                    utcExpiresAt: null
-                    utcRedeemedAt: null
+                    utcExpiresAt:
+                    utcRedeemedAt:
                     utcConfirmedAt: '2022-05-25T11:03:31Z'
                     productId: '1'
                     product:
                       id: '1'
                       internalName: PPU | OH
-                      reference: null
+                      reference:
                       locale: en
                       timeZone: Europe/London
                       allowFreesale: false
@@ -10790,7 +10790,7 @@ paths:
                         - id: DEFAULT
                           default: true
                           internalName: DEFAULT
-                          reference: null
+                          reference:
                           availabilityLocalStartTimes:
                             - '00:00'
                           cancellationCutoff: 0 hours
@@ -10799,7 +10799,7 @@ paths:
                           requiredContactFields: []
                           restrictions:
                             minUnits: 0
-                            maxUnits: null
+                            maxUnits:
                           units:
                             - id: adult
                               internalName: adult
@@ -10810,8 +10810,8 @@ paths:
                                 minAge: 18
                                 maxAge: 100
                                 idRequired: false
-                                minQuantity: null
-                                maxQuantity: null
+                                minQuantity:
+                                maxQuantity:
                                 paxCount: 1
                                 accompaniedBy: []
                     optionId: DEFAULT
@@ -10819,7 +10819,7 @@ paths:
                       id: DEFAULT
                       default: true
                       internalName: DEFAULT
-                      reference: null
+                      reference:
                       availabilityLocalStartTimes:
                         - '00:00'
                       cancellationCutoff: 0 hours
@@ -10828,7 +10828,7 @@ paths:
                       requiredContactFields: []
                       restrictions:
                         minUnits: 0
-                        maxUnits: null
+                        maxUnits:
                       units:
                         - id: adult
                           internalName: adult
@@ -10839,12 +10839,12 @@ paths:
                             minAge: 18
                             maxAge: 100
                             idRequired: false
-                            minQuantity: null
-                            maxQuantity: null
+                            minQuantity:
+                            maxQuantity:
                             paxCount: 1
                             accompaniedBy: []
                     cancellable: true
-                    cancellation: null
+                    cancellation:
                     freesale: false
                     availabilityId: '2022-04-30T00:00:00+01:00'
                     availability:
@@ -10860,17 +10860,17 @@ paths:
                       firstName: John
                       lastName: Doe
                       emailAddress: johndoe@email.com
-                      phoneNumber: null
+                      phoneNumber:
                       locales: []
-                      country: null
-                      notes: null
-                    notes: null
+                      country:
+                      notes:
+                    notes:
                     deliveryMethods:
                       - TICKET
                       - VOUCHER
                     voucher:
                       redemptionMethod: DIGITAL
-                      utcRedeemedAt: null
+                      utcRedeemedAt:
                       deliveryOptions:
                         - deliveryFormat: PDF_URL
                           deliveryValue: https://api.octomock.com/octo/pdf?booking=ec0ce0c2-03f0-4c64-bbc5-5e0f7d1e1c0a
@@ -10878,7 +10878,7 @@ paths:
                           deliveryValue: ALG6RQ
                     unitItems:
                       - uuid: 25ec5429-d563-45f9-ba5b-85b03edbf65e
-                        resellerReference: null
+                        resellerReference:
                         supplierReference: EO6Q0P
                         unit:
                           id: adult
@@ -10890,25 +10890,25 @@ paths:
                             minAge: 18
                             maxAge: 100
                             idRequired: false
-                            minQuantity: null
-                            maxQuantity: null
+                            minQuantity:
+                            maxQuantity:
                             paxCount: 1
                             accompaniedBy: []
                         unitId: adult
                         status: ON_HOLD
-                        utcRedeemedAt: null
+                        utcRedeemedAt:
                         contact:
-                          fullName: null
-                          firstName: null
-                          lastName: null
-                          emailAddress: null
-                          phoneNumber: null
+                          fullName:
+                          firstName:
+                          lastName:
+                          emailAddress:
+                          phoneNumber:
                           locales: []
-                          country: null
-                          notes: null
+                          country:
+                          notes:
                         ticket:
                           redemptionMethod: DIGITAL
-                          utcRedeemedAt: null
+                          utcRedeemedAt:
                           deliveryOptions:
                             - deliveryFormat: PDF_URL
                               deliveryValue: https://api.octomock.com/octo/pdf?booking=ec0ce0c2-03f0-4c64-bbc5-5e0f7d1e1c0a&ticket=25ec5429-d563-45f9-ba5b-85b03edbf65e
@@ -10931,7 +10931,7 @@ paths:
       operationId: get-bookings-:uuid
       description: Fetch the status of an existing booking.
     patch:
-      summary: Booking Update
+      summary: Open Connectivity for Tours, Activities, and Attractions Booking Update
       tags:
         - Bookings
       operationId: patch-bookings-:uuid
@@ -10952,8 +10952,8 @@ paths:
                     status: CONFIRMED
                     utcCreatedAt: '2021-10-27T23:28:43Z'
                     utcUpdatedAt: '2021-10-27T23:28:45Z'
-                    utcExpiresAt: null
-                    utcRedeemedAt: null
+                    utcExpiresAt:
+                    utcRedeemedAt:
                     utcConfirmedAt: '2021-10-27T23:28:45Z'
                     productId: 5379ce46-0620-42ce-b65c-70d6fc1c9ac2
                 examples: []
@@ -11043,7 +11043,7 @@ paths:
                       example-1:
                         id: 28ca088b-bc7b-4746-ab06-5971f1ed5a5e
                         internalName: Edinburgh Hop-On Hop-Off Bus Tour
-                        reference: null
+                        reference:
                         locale: en
                         timeZone: Europe/London
                         allowFreesale: true
@@ -11217,7 +11217,7 @@ paths:
                               id: DEFAULT
                               default: true
                               internalName: DEFAULT
-                              reference: null
+                              reference:
                               availabilityLocalStartTimes:
                                 - '00:00'
                               cancellationCutoff: 1 hour
@@ -11329,7 +11329,7 @@ paths:
                                   maxUnits: 9
                               description: An object containing a fixed list of restrictions for booking the option.
                               examples:
-                                - minUnits: null
+                                - minUnits:
                                   maxUnits: 10
                               properties:
                                 minUnits:
@@ -11356,7 +11356,7 @@ paths:
                                   example-1:
                                     id: unit_c1709f42-297e-4f7e-bd6b-3e77d4622d8a
                                     internalName: Adult
-                                    reference: null
+                                    reference:
                                     type: ADULT
                                     requiredContactFields: []
                                 examples:
@@ -11436,7 +11436,7 @@ paths:
                                         maxAge: 100
                                         idRequired: false
                                         minQuantity: 1
-                                        maxQuantity: null
+                                        maxQuantity:
                                         paxCount: 4
                                         accompaniedBy: []
                                     description: unit restrictions
@@ -11536,7 +11536,7 @@ paths:
                         id: DEFAULT
                         default: true
                         internalName: DEFAULT
-                        reference: null
+                        reference:
                         availabilityLocalStartTimes:
                           - '00:00'
                         cancellationCutoff: 1 hour
@@ -11648,7 +11648,7 @@ paths:
                             maxUnits: 9
                         description: An object containing a fixed list of restrictions for booking the option.
                         examples:
-                          - minUnits: null
+                          - minUnits:
                             maxUnits: 10
                         properties:
                           minUnits:
@@ -11675,7 +11675,7 @@ paths:
                             example-1:
                               id: unit_c1709f42-297e-4f7e-bd6b-3e77d4622d8a
                               internalName: Adult
-                              reference: null
+                              reference:
                               type: ADULT
                               requiredContactFields: []
                           examples:
@@ -11755,7 +11755,7 @@ paths:
                                   maxAge: 100
                                   idRequired: false
                                   minQuantity: 1
-                                  maxQuantity: null
+                                  maxQuantity:
                                   paxCount: 4
                                   accompaniedBy: []
                               description: unit restrictions
@@ -11916,26 +11916,26 @@ paths:
                     type: object
                     x-examples:
                       example-1:
-                        fullName: null
-                        firstName: null
-                        lastName: null
-                        emailAddress: null
-                        phoneNumber: null
+                        fullName:
+                        firstName:
+                        lastName:
+                        emailAddress:
+                        phoneNumber:
                         locales: []
-                        postalCode: null
-                        country: null
-                        notes: null
+                        postalCode:
+                        country:
+                        notes:
                     examples:
                       - fullName: John Doe
                         firstName: John
                         lastName: Doe
                         emailAddress: johndoe@email.com
-                        phoneNumber: null
+                        phoneNumber:
                         locales:
                           - en
-                        postalCode: null
-                        country: null
-                        notes: null
+                        postalCode:
+                        country:
+                        notes:
                     description: Contact details for the guests that will attend the tour/attraction. Contact schema can be applied to both the booking object (the main reservation) or the unit object (individual ticket holders - if the supplier requires this information)
                     properties:
                       fullName:
@@ -12018,7 +12018,7 @@ paths:
                         x-examples:
                           example-1:
                             redemptionMethod: DIGITAL
-                            utcRedeemedAt: null
+                            utcRedeemedAt:
                             deliveryOptions:
                               - deliveryFormat: QRCODE
                                 deliveryValue: '!1|El3f0wUmcnrEmviMcR9qwqC9hvfrcWc6cZcRcrcR|yrirfZfqHPj40mvhpw2XzX|q7FF77QqFD7fDhr9'
@@ -12026,7 +12026,7 @@ paths:
                                 deliveryValue: https://api.ventrata.com/octo/pdf?booking=36d2d844-121d-453c-b514-de027caaf27f&ticket=72419a19-c58c-46a0-b316-13509de43909
                         examples:
                           - redemptionMethod: DIGITAL
-                            utcRedeemedAt: null
+                            utcRedeemedAt:
                             deliveryOptions:
                               - deliveryFormat: QRCODE
                                 deliveryValue: string
@@ -12124,7 +12124,7 @@ paths:
                             example-1:
                               id: unit_c1709f42-297e-4f7e-bd6b-3e77d4622d8a
                               internalName: Adult
-                              reference: null
+                              reference:
                               type: ADULT
                               requiredContactFields: []
                           examples:
@@ -12204,7 +12204,7 @@ paths:
                                   maxAge: 100
                                   idRequired: false
                                   minQuantity: 1
-                                  maxQuantity: null
+                                  maxQuantity:
                                   paxCount: 4
                                   accompaniedBy: []
                               description: unit restrictions
@@ -12300,26 +12300,26 @@ paths:
                           type: object
                           x-examples:
                             example-1:
-                              fullName: null
-                              firstName: null
-                              lastName: null
-                              emailAddress: null
-                              phoneNumber: null
+                              fullName:
+                              firstName:
+                              lastName:
+                              emailAddress:
+                              phoneNumber:
                               locales: []
-                              postalCode: null
-                              country: null
-                              notes: null
+                              postalCode:
+                              country:
+                              notes:
                           examples:
                             - fullName: John Doe
                               firstName: John
                               lastName: Doe
                               emailAddress: johndoe@email.com
-                              phoneNumber: null
+                              phoneNumber:
                               locales:
                                 - en
-                              postalCode: null
-                              country: null
-                              notes: null
+                              postalCode:
+                              country:
+                              notes:
                           description: Contact details for the guests that will attend the tour/attraction. Contact schema can be applied to both the booking object (the main reservation) or the unit object (individual ticket holders - if the supplier requires this information)
                           properties:
                             fullName:
@@ -12379,7 +12379,7 @@ paths:
                               x-examples:
                                 example-1:
                                   redemptionMethod: DIGITAL
-                                  utcRedeemedAt: null
+                                  utcRedeemedAt:
                                   deliveryOptions:
                                     - deliveryFormat: QRCODE
                                       deliveryValue: '!1|El3f0wUmcnrEmviMcR9qwqC9hvfrcWc6cZcRcrcR|yrirfZfqHPj40mvhpw2XzX|q7FF77QqFD7fDhr9'
@@ -12387,7 +12387,7 @@ paths:
                                       deliveryValue: https://api.ventrata.com/octo/pdf?booking=36d2d844-121d-453c-b514-de027caaf27f&ticket=72419a19-c58c-46a0-b316-13509de43909
                               examples:
                                 - redemptionMethod: DIGITAL
-                                  utcRedeemedAt: null
+                                  utcRedeemedAt:
                                   deliveryOptions:
                                     - deliveryFormat: QRCODE
                                       deliveryValue: string
@@ -12466,7 +12466,7 @@ paths:
                           unit:
                             id: string
                             internalName: string
-                            reference: null
+                            reference:
                             type: ADULT
                             requiredContactFields:
                               - firstName
@@ -12475,25 +12475,25 @@ paths:
                               maxAge: 99
                               idRequired: false
                               minQuantity: 0
-                              maxQuantity: null
+                              maxQuantity:
                               paxCount: 0
                               accompaniedBy: []
                           status: CONFIRMED
-                          utcRedeemedAt: null
+                          utcRedeemedAt:
                           contact:
                             fullName: John Doe
                             firstName: John
                             lastName: Doe
-                            emailAddress: null
-                            phoneNumber: null
+                            emailAddress:
+                            phoneNumber:
                             locales:
                               - en
-                            postalCode: null
-                            country: null
-                            notes: null
+                            postalCode:
+                            country:
+                            notes:
                           ticket:
                             redemptionMethod: DIGITAL
-                            utcRedeemedAt: null
+                            utcRedeemedAt:
                             deliveryOptions:
                               - deliveryFormat: QRCODE
                                 deliveryValue: string
@@ -12528,19 +12528,19 @@ paths:
                     id: 3ef65048-5ffe-474f-8a5c-fb35a9faa6ed
                     uuid: 814d2566-2c71-4e6a-aaa9-59b9bf26cc0d
                     testMode: true
-                    resellerReference: null
+                    resellerReference:
                     supplierReference: RNSRSM
                     status: CONFIRMED
                     utcCreatedAt: '2022-05-25T11:07:05Z'
                     utcUpdatedAt: '2022-05-25T11:09:32Z'
-                    utcExpiresAt: null
-                    utcRedeemedAt: null
+                    utcExpiresAt:
+                    utcRedeemedAt:
                     utcConfirmedAt: '2022-05-25T11:09:32Z'
                     productId: '1'
                     product:
                       id: '1'
                       internalName: PPU | OH
-                      reference: null
+                      reference:
                       locale: en
                       timeZone: Europe/London
                       allowFreesale: false
@@ -12559,7 +12559,7 @@ paths:
                         - id: DEFAULT
                           default: true
                           internalName: DEFAULT
-                          reference: null
+                          reference:
                           availabilityLocalStartTimes:
                             - '00:00'
                           cancellationCutoff: 0 hours
@@ -12568,7 +12568,7 @@ paths:
                           requiredContactFields: []
                           restrictions:
                             minUnits: 0
-                            maxUnits: null
+                            maxUnits:
                           units:
                             - id: adult
                               internalName: adult
@@ -12579,8 +12579,8 @@ paths:
                                 minAge: 18
                                 maxAge: 100
                                 idRequired: false
-                                minQuantity: null
-                                maxQuantity: null
+                                minQuantity:
+                                maxQuantity:
                                 paxCount: 1
                                 accompaniedBy: []
                     optionId: DEFAULT
@@ -12588,7 +12588,7 @@ paths:
                       id: DEFAULT
                       default: true
                       internalName: DEFAULT
-                      reference: null
+                      reference:
                       availabilityLocalStartTimes:
                         - '00:00'
                       cancellationCutoff: 0 hours
@@ -12597,7 +12597,7 @@ paths:
                       requiredContactFields: []
                       restrictions:
                         minUnits: 0
-                        maxUnits: null
+                        maxUnits:
                       units:
                         - id: adult
                           internalName: adult
@@ -12608,12 +12608,12 @@ paths:
                             minAge: 18
                             maxAge: 100
                             idRequired: false
-                            minQuantity: null
-                            maxQuantity: null
+                            minQuantity:
+                            maxQuantity:
                             paxCount: 1
                             accompaniedBy: []
                     cancellable: true
-                    cancellation: null
+                    cancellation:
                     freesale: false
                     availabilityId: '2022-04-30T00:00:00+01:00'
                     availability:
@@ -12626,20 +12626,20 @@ paths:
                           to: '17:00'
                     contact:
                       fullName: test
-                      firstName: null
-                      lastName: null
+                      firstName:
+                      lastName:
                       emailAddress: test@test.test
-                      phoneNumber: null
+                      phoneNumber:
                       locales: []
-                      country: null
-                      notes: null
-                    notes: null
+                      country:
+                      notes:
+                    notes:
                     deliveryMethods:
                       - TICKET
                       - VOUCHER
                     voucher:
                       redemptionMethod: DIGITAL
-                      utcRedeemedAt: null
+                      utcRedeemedAt:
                       deliveryOptions:
                         - deliveryFormat: PDF_URL
                           deliveryValue: https://api.octomock.com/octo/pdf?booking=814d2566-2c71-4e6a-aaa9-59b9bf26cc0d
@@ -12647,7 +12647,7 @@ paths:
                           deliveryValue: RNSRSM
                     unitItems:
                       - uuid: a204e6de-7909-4bf2-b7a8-2884189534bc
-                        resellerReference: null
+                        resellerReference:
                         supplierReference: 1LTYVC
                         unit:
                           id: adult
@@ -12659,32 +12659,32 @@ paths:
                             minAge: 18
                             maxAge: 100
                             idRequired: false
-                            minQuantity: null
-                            maxQuantity: null
+                            minQuantity:
+                            maxQuantity:
                             paxCount: 1
                             accompaniedBy: []
                         unitId: adult
                         status: ON_HOLD
-                        utcRedeemedAt: null
+                        utcRedeemedAt:
                         contact:
-                          fullName: null
-                          firstName: null
-                          lastName: null
-                          emailAddress: null
-                          phoneNumber: null
+                          fullName:
+                          firstName:
+                          lastName:
+                          emailAddress:
+                          phoneNumber:
                           locales: []
-                          country: null
-                          notes: null
+                          country:
+                          notes:
                         ticket:
                           redemptionMethod: DIGITAL
-                          utcRedeemedAt: null
+                          utcRedeemedAt:
                           deliveryOptions:
                             - deliveryFormat: PDF_URL
                               deliveryValue: https://api.octomock.com/octo/pdf?booking=814d2566-2c71-4e6a-aaa9-59b9bf26cc0d&ticket=a204e6de-7909-4bf2-b7a8-2884189534bc
                             - deliveryFormat: QRCODE
                               deliveryValue: 1LTYVC
                       - uuid: 9116e598-6713-4cb5-8ba4-e5b839f7a5d5
-                        resellerReference: null
+                        resellerReference:
                         supplierReference: A89VR8
                         unit:
                           id: adult
@@ -12696,25 +12696,25 @@ paths:
                             minAge: 18
                             maxAge: 100
                             idRequired: false
-                            minQuantity: null
-                            maxQuantity: null
+                            minQuantity:
+                            maxQuantity:
                             paxCount: 1
                             accompaniedBy: []
                         unitId: adult
                         status: ON_HOLD
-                        utcRedeemedAt: null
+                        utcRedeemedAt:
                         contact:
-                          fullName: null
-                          firstName: null
-                          lastName: null
-                          emailAddress: null
-                          phoneNumber: null
+                          fullName:
+                          firstName:
+                          lastName:
+                          emailAddress:
+                          phoneNumber:
                           locales: []
-                          country: null
-                          notes: null
+                          country:
+                          notes:
                         ticket:
                           redemptionMethod: DIGITAL
-                          utcRedeemedAt: null
+                          utcRedeemedAt:
                           deliveryOptions:
                             - deliveryFormat: PDF_URL
                               deliveryValue: https://api.octomock.com/octo/pdf?booking=814d2566-2c71-4e6a-aaa9-59b9bf26cc0d&ticket=9116e598-6713-4cb5-8ba4-e5b839f7a5d5
@@ -12921,7 +12921,7 @@ paths:
         required: true
         description: The UUID of the booking
     post:
-      summary: Extend Reservation
+      summary: Open Connectivity for Tours, Activities, and Attractions Extend Reservation
       tags:
         - Bookings
       operationId: post-bookings-uuid-extend
@@ -12942,8 +12942,8 @@ paths:
                     status: CONFIRMED
                     utcCreatedAt: '2021-10-27T23:28:43Z'
                     utcUpdatedAt: '2021-10-27T23:28:45Z'
-                    utcExpiresAt: null
-                    utcRedeemedAt: null
+                    utcExpiresAt:
+                    utcRedeemedAt:
                     utcConfirmedAt: '2021-10-27T23:28:45Z'
                     productId: 5379ce46-0620-42ce-b65c-70d6fc1c9ac2
                 examples: []
@@ -13033,7 +13033,7 @@ paths:
                       example-1:
                         id: 28ca088b-bc7b-4746-ab06-5971f1ed5a5e
                         internalName: Edinburgh Hop-On Hop-Off Bus Tour
-                        reference: null
+                        reference:
                         locale: en
                         timeZone: Europe/London
                         allowFreesale: true
@@ -13207,7 +13207,7 @@ paths:
                               id: DEFAULT
                               default: true
                               internalName: DEFAULT
-                              reference: null
+                              reference:
                               availabilityLocalStartTimes:
                                 - '00:00'
                               cancellationCutoff: 1 hour
@@ -13319,7 +13319,7 @@ paths:
                                   maxUnits: 9
                               description: An object containing a fixed list of restrictions for booking the option.
                               examples:
-                                - minUnits: null
+                                - minUnits:
                                   maxUnits: 10
                               properties:
                                 minUnits:
@@ -13346,7 +13346,7 @@ paths:
                                   example-1:
                                     id: unit_c1709f42-297e-4f7e-bd6b-3e77d4622d8a
                                     internalName: Adult
-                                    reference: null
+                                    reference:
                                     type: ADULT
                                     requiredContactFields: []
                                 examples:
@@ -13426,7 +13426,7 @@ paths:
                                         maxAge: 100
                                         idRequired: false
                                         minQuantity: 1
-                                        maxQuantity: null
+                                        maxQuantity:
                                         paxCount: 4
                                         accompaniedBy: []
                                     description: unit restrictions
@@ -13526,7 +13526,7 @@ paths:
                         id: DEFAULT
                         default: true
                         internalName: DEFAULT
-                        reference: null
+                        reference:
                         availabilityLocalStartTimes:
                           - '00:00'
                         cancellationCutoff: 1 hour
@@ -13638,7 +13638,7 @@ paths:
                             maxUnits: 9
                         description: An object containing a fixed list of restrictions for booking the option.
                         examples:
-                          - minUnits: null
+                          - minUnits:
                             maxUnits: 10
                         properties:
                           minUnits:
@@ -13665,7 +13665,7 @@ paths:
                             example-1:
                               id: unit_c1709f42-297e-4f7e-bd6b-3e77d4622d8a
                               internalName: Adult
-                              reference: null
+                              reference:
                               type: ADULT
                               requiredContactFields: []
                           examples:
@@ -13745,7 +13745,7 @@ paths:
                                   maxAge: 100
                                   idRequired: false
                                   minQuantity: 1
-                                  maxQuantity: null
+                                  maxQuantity:
                                   paxCount: 4
                                   accompaniedBy: []
                               description: unit restrictions
@@ -13906,26 +13906,26 @@ paths:
                     type: object
                     x-examples:
                       example-1:
-                        fullName: null
-                        firstName: null
-                        lastName: null
-                        emailAddress: null
-                        phoneNumber: null
+                        fullName:
+                        firstName:
+                        lastName:
+                        emailAddress:
+                        phoneNumber:
                         locales: []
-                        postalCode: null
-                        country: null
-                        notes: null
+                        postalCode:
+                        country:
+                        notes:
                     examples:
                       - fullName: John Doe
                         firstName: John
                         lastName: Doe
                         emailAddress: johndoe@email.com
-                        phoneNumber: null
+                        phoneNumber:
                         locales:
                           - en
-                        postalCode: null
-                        country: null
-                        notes: null
+                        postalCode:
+                        country:
+                        notes:
                     description: Contact details for the guests that will attend the tour/attraction. Contact schema can be applied to both the booking object (the main reservation) or the unit object (individual ticket holders - if the supplier requires this information)
                     properties:
                       fullName:
@@ -14008,7 +14008,7 @@ paths:
                         x-examples:
                           example-1:
                             redemptionMethod: DIGITAL
-                            utcRedeemedAt: null
+                            utcRedeemedAt:
                             deliveryOptions:
                               - deliveryFormat: QRCODE
                                 deliveryValue: '!1|El3f0wUmcnrEmviMcR9qwqC9hvfrcWc6cZcRcrcR|yrirfZfqHPj40mvhpw2XzX|q7FF77QqFD7fDhr9'
@@ -14016,7 +14016,7 @@ paths:
                                 deliveryValue: https://api.ventrata.com/octo/pdf?booking=36d2d844-121d-453c-b514-de027caaf27f&ticket=72419a19-c58c-46a0-b316-13509de43909
                         examples:
                           - redemptionMethod: DIGITAL
-                            utcRedeemedAt: null
+                            utcRedeemedAt:
                             deliveryOptions:
                               - deliveryFormat: QRCODE
                                 deliveryValue: string
@@ -14114,7 +14114,7 @@ paths:
                             example-1:
                               id: unit_c1709f42-297e-4f7e-bd6b-3e77d4622d8a
                               internalName: Adult
-                              reference: null
+                              reference:
                               type: ADULT
                               requiredContactFields: []
                           examples:
@@ -14194,7 +14194,7 @@ paths:
                                   maxAge: 100
                                   idRequired: false
                                   minQuantity: 1
-                                  maxQuantity: null
+                                  maxQuantity:
                                   paxCount: 4
                                   accompaniedBy: []
                               description: unit restrictions
@@ -14290,26 +14290,26 @@ paths:
                           type: object
                           x-examples:
                             example-1:
-                              fullName: null
-                              firstName: null
-                              lastName: null
-                              emailAddress: null
-                              phoneNumber: null
+                              fullName:
+                              firstName:
+                              lastName:
+                              emailAddress:
+                              phoneNumber:
                               locales: []
-                              postalCode: null
-                              country: null
-                              notes: null
+                              postalCode:
+                              country:
+                              notes:
                           examples:
                             - fullName: John Doe
                               firstName: John
                               lastName: Doe
                               emailAddress: johndoe@email.com
-                              phoneNumber: null
+                              phoneNumber:
                               locales:
                                 - en
-                              postalCode: null
-                              country: null
-                              notes: null
+                              postalCode:
+                              country:
+                              notes:
                           description: Contact details for the guests that will attend the tour/attraction. Contact schema can be applied to both the booking object (the main reservation) or the unit object (individual ticket holders - if the supplier requires this information)
                           properties:
                             fullName:
@@ -14369,7 +14369,7 @@ paths:
                               x-examples:
                                 example-1:
                                   redemptionMethod: DIGITAL
-                                  utcRedeemedAt: null
+                                  utcRedeemedAt:
                                   deliveryOptions:
                                     - deliveryFormat: QRCODE
                                       deliveryValue: '!1|El3f0wUmcnrEmviMcR9qwqC9hvfrcWc6cZcRcrcR|yrirfZfqHPj40mvhpw2XzX|q7FF77QqFD7fDhr9'
@@ -14377,7 +14377,7 @@ paths:
                                       deliveryValue: https://api.ventrata.com/octo/pdf?booking=36d2d844-121d-453c-b514-de027caaf27f&ticket=72419a19-c58c-46a0-b316-13509de43909
                               examples:
                                 - redemptionMethod: DIGITAL
-                                  utcRedeemedAt: null
+                                  utcRedeemedAt:
                                   deliveryOptions:
                                     - deliveryFormat: QRCODE
                                       deliveryValue: string
@@ -14456,7 +14456,7 @@ paths:
                           unit:
                             id: string
                             internalName: string
-                            reference: null
+                            reference:
                             type: ADULT
                             requiredContactFields:
                               - firstName
@@ -14465,25 +14465,25 @@ paths:
                               maxAge: 99
                               idRequired: false
                               minQuantity: 0
-                              maxQuantity: null
+                              maxQuantity:
                               paxCount: 0
                               accompaniedBy: []
                           status: CONFIRMED
-                          utcRedeemedAt: null
+                          utcRedeemedAt:
                           contact:
                             fullName: John Doe
                             firstName: John
                             lastName: Doe
-                            emailAddress: null
-                            phoneNumber: null
+                            emailAddress:
+                            phoneNumber:
                             locales:
                               - en
-                            postalCode: null
-                            country: null
-                            notes: null
+                            postalCode:
+                            country:
+                            notes:
                           ticket:
                             redemptionMethod: DIGITAL
-                            utcRedeemedAt: null
+                            utcRedeemedAt:
                             deliveryOptions:
                               - deliveryFormat: QRCODE
                                 deliveryValue: string
@@ -14518,19 +14518,19 @@ paths:
                     id: 602a9fdf-5c79-4984-9474-7e14da9b6027
                     uuid: a88b4b8d-9c3b-4a09-ba27-323b43af57e4
                     testMode: true
-                    resellerReference: null
+                    resellerReference:
                     supplierReference: XOPSUT
                     status: ON_HOLD
                     utcCreatedAt: '2022-05-25T10:34:22Z'
                     utcUpdatedAt: '2022-05-25T10:34:22Z'
                     utcExpiresAt: '2022-05-25T11:04:22Z'
-                    utcRedeemedAt: null
-                    utcConfirmedAt: null
+                    utcRedeemedAt:
+                    utcConfirmedAt:
                     productId: '1'
                     product:
                       id: '1'
                       internalName: PPU | OH
-                      reference: null
+                      reference:
                       locale: en
                       timeZone: Europe/London
                       allowFreesale: false
@@ -14549,7 +14549,7 @@ paths:
                         - id: DEFAULT
                           default: true
                           internalName: DEFAULT
-                          reference: null
+                          reference:
                           availabilityLocalStartTimes:
                             - '00:00'
                           cancellationCutoff: 0 hours
@@ -14558,7 +14558,7 @@ paths:
                           requiredContactFields: []
                           restrictions:
                             minUnits: 0
-                            maxUnits: null
+                            maxUnits:
                           units:
                             - id: adult
                               internalName: adult
@@ -14569,8 +14569,8 @@ paths:
                                 minAge: 18
                                 maxAge: 100
                                 idRequired: false
-                                minQuantity: null
-                                maxQuantity: null
+                                minQuantity:
+                                maxQuantity:
                                 paxCount: 1
                                 accompaniedBy: []
                     optionId: DEFAULT
@@ -14578,7 +14578,7 @@ paths:
                       id: DEFAULT
                       default: true
                       internalName: DEFAULT
-                      reference: null
+                      reference:
                       availabilityLocalStartTimes:
                         - '00:00'
                       cancellationCutoff: 0 hours
@@ -14587,7 +14587,7 @@ paths:
                       requiredContactFields: []
                       restrictions:
                         minUnits: 0
-                        maxUnits: null
+                        maxUnits:
                       units:
                         - id: adult
                           internalName: adult
@@ -14598,12 +14598,12 @@ paths:
                             minAge: 18
                             maxAge: 100
                             idRequired: false
-                            minQuantity: null
-                            maxQuantity: null
+                            minQuantity:
+                            maxQuantity:
                             paxCount: 1
                             accompaniedBy: []
                     cancellable: true
-                    cancellation: null
+                    cancellation:
                     freesale: false
                     availabilityId: '2022-04-30T00:00:00+01:00'
                     availability:
@@ -14615,25 +14615,25 @@ paths:
                         - from: '09:00'
                           to: '17:00'
                     contact:
-                      fullName: null
-                      firstName: null
-                      lastName: null
-                      emailAddress: null
-                      phoneNumber: null
+                      fullName:
+                      firstName:
+                      lastName:
+                      emailAddress:
+                      phoneNumber:
                       locales: []
-                      country: null
-                      notes: null
-                    notes: null
+                      country:
+                      notes:
+                    notes:
                     deliveryMethods:
                       - TICKET
                       - VOUCHER
                     voucher:
                       redemptionMethod: DIGITAL
-                      utcRedeemedAt: null
+                      utcRedeemedAt:
                       deliveryOptions: []
                     unitItems:
                       - uuid: 6cbd2582-1345-4d8d-8223-ad004beebc1a
-                        resellerReference: null
+                        resellerReference:
                         supplierReference: CBIYWQ
                         unit:
                           id: adult
@@ -14645,25 +14645,25 @@ paths:
                             minAge: 18
                             maxAge: 100
                             idRequired: false
-                            minQuantity: null
-                            maxQuantity: null
+                            minQuantity:
+                            maxQuantity:
                             paxCount: 1
                             accompaniedBy: []
                         unitId: adult
                         status: ON_HOLD
-                        utcRedeemedAt: null
+                        utcRedeemedAt:
                         contact:
-                          fullName: null
-                          firstName: null
-                          lastName: null
-                          emailAddress: null
-                          phoneNumber: null
+                          fullName:
+                          firstName:
+                          lastName:
+                          emailAddress:
+                          phoneNumber:
                           locales: []
-                          country: null
-                          notes: null
+                          country:
+                          notes:
                         ticket:
                           redemptionMethod: DIGITAL
-                          utcRedeemedAt: null
+                          utcRedeemedAt:
                           deliveryOptions: []
         '400':
           description: Example response
@@ -14724,7 +14724,7 @@ components:
         example-1:
           id: 28ca088b-bc7b-4746-ab06-5971f1ed5a5e
           internalName: Edinburgh Hop-On Hop-Off Bus Tour
-          reference: null
+          reference:
           locale: en
           timeZone: Europe/London
           allowFreesale: true
@@ -14898,7 +14898,7 @@ components:
                 id: DEFAULT
                 default: true
                 internalName: DEFAULT
-                reference: null
+                reference:
                 availabilityLocalStartTimes:
                   - '00:00'
                 cancellationCutoff: 1 hour
@@ -15010,7 +15010,7 @@ components:
                     maxUnits: 9
                 description: An object containing a fixed list of restrictions for booking the option.
                 examples:
-                  - minUnits: null
+                  - minUnits:
                     maxUnits: 10
                 properties:
                   minUnits:
@@ -15037,7 +15037,7 @@ components:
                     example-1:
                       id: unit_c1709f42-297e-4f7e-bd6b-3e77d4622d8a
                       internalName: Adult
-                      reference: null
+                      reference:
                       type: ADULT
                       requiredContactFields: []
                   examples:
@@ -15117,7 +15117,7 @@ components:
                           maxAge: 100
                           idRequired: false
                           minQuantity: 1
-                          maxQuantity: null
+                          maxQuantity:
                           paxCount: 4
                           accompaniedBy: []
                       description: unit restrictions
@@ -15212,7 +15212,7 @@ components:
         example-1:
           id: unit_c1709f42-297e-4f7e-bd6b-3e77d4622d8a
           internalName: Adult
-          reference: null
+          reference:
           type: ADULT
           requiredContactFields: []
       examples:
@@ -15292,7 +15292,7 @@ components:
               maxAge: 100
               idRequired: false
               minQuantity: 1
-              maxQuantity: null
+              maxQuantity:
               paxCount: 4
               accompaniedBy: []
           description: unit restrictions
@@ -15363,7 +15363,7 @@ components:
           maxAge: 100
           idRequired: false
           minQuantity: 1
-          maxQuantity: null
+          maxQuantity:
           paxCount: 4
           accompaniedBy: []
       description: unit restrictions
@@ -15462,7 +15462,7 @@ components:
           maxUnits: 9
       description: An object containing a fixed list of restrictions for booking the option.
       examples:
-        - minUnits: null
+        - minUnits:
           maxUnits: 10
       properties:
         minUnits:
@@ -15487,7 +15487,7 @@ components:
           id: DEFAULT
           default: true
           internalName: DEFAULT
-          reference: null
+          reference:
           availabilityLocalStartTimes:
             - '00:00'
           cancellationCutoff: 1 hour
@@ -15599,7 +15599,7 @@ components:
               maxUnits: 9
           description: An object containing a fixed list of restrictions for booking the option.
           examples:
-            - minUnits: null
+            - minUnits:
               maxUnits: 10
           properties:
             minUnits:
@@ -15626,7 +15626,7 @@ components:
               example-1:
                 id: unit_c1709f42-297e-4f7e-bd6b-3e77d4622d8a
                 internalName: Adult
-                reference: null
+                reference:
                 type: ADULT
                 requiredContactFields: []
             examples:
@@ -15706,7 +15706,7 @@ components:
                     maxAge: 100
                     idRequired: false
                     minQuantity: 1
-                    maxQuantity: null
+                    maxQuantity:
                     paxCount: 4
                     accompaniedBy: []
                 description: unit restrictions
@@ -15863,19 +15863,19 @@ components:
           name: Edin Explore
           endpoint: https://api.ventrata.com/api-octo
           contact:
-            website: null
+            website:
             email: support@ventrata.com
-            telephone: null
+            telephone:
             address: Marble Arch, London, W1H 7EJ, United Kingdom
       examples:
         - id: 48b4d2e9-cd8b-4ac2-a5ee-4217bf2622c2
           name: John Doe's company
           endpoint: http://example.com
           contact:
-            website: null
+            website:
             email: john.doe@email.com
-            telephone: null
-            address: null
+            telephone:
+            address:
       properties:
         id:
           type: string
@@ -15939,8 +15939,8 @@ components:
           allDay: true
           available: true
           status: FREESALE
-          vacancies: null
-          capacity: null
+          vacancies:
+          capacity:
           maxUnits: 9
           utcCutoffAt: '2022-05-22T23:00:00Z'
           openingHours:
@@ -15953,9 +15953,9 @@ components:
           allDay: true
           available: true
           status: FREESALE
-          vacancies: null
-          capacity: null
-          maxUnits: null
+          vacancies:
+          capacity:
+          maxUnits:
           utcCutoffAt: '2022-06-29T22:00:00Z'
           openingHours:
             - from: '09:00'
@@ -15968,7 +15968,7 @@ components:
           status: AVAILABLE
           vacancies: 10
           capacity: 10
-          maxUnits: null
+          maxUnits:
           utcCutoffAt: '2022-06-30T10:00:00Z'
           openingHours: []
       title: ''
@@ -16102,7 +16102,7 @@ components:
           available: false
           status: CLOSED
           vacancies: 0
-          capacity: null
+          capacity:
           openingHours:
             - from: '08:00'
               to: '18:30'
@@ -16269,7 +16269,7 @@ components:
             example-1:
               id: unit_c1709f42-297e-4f7e-bd6b-3e77d4622d8a
               internalName: Adult
-              reference: null
+              reference:
               type: ADULT
               requiredContactFields: []
           examples:
@@ -16349,7 +16349,7 @@ components:
                   maxAge: 100
                   idRequired: false
                   minQuantity: 1
-                  maxQuantity: null
+                  maxQuantity:
                   paxCount: 4
                   accompaniedBy: []
               description: unit restrictions
@@ -16445,26 +16445,26 @@ components:
           type: object
           x-examples:
             example-1:
-              fullName: null
-              firstName: null
-              lastName: null
-              emailAddress: null
-              phoneNumber: null
+              fullName:
+              firstName:
+              lastName:
+              emailAddress:
+              phoneNumber:
               locales: []
-              postalCode: null
-              country: null
-              notes: null
+              postalCode:
+              country:
+              notes:
           examples:
             - fullName: John Doe
               firstName: John
               lastName: Doe
               emailAddress: johndoe@email.com
-              phoneNumber: null
+              phoneNumber:
               locales:
                 - en
-              postalCode: null
-              country: null
-              notes: null
+              postalCode:
+              country:
+              notes:
           description: Contact details for the guests that will attend the tour/attraction. Contact schema can be applied to both the booking object (the main reservation) or the unit object (individual ticket holders - if the supplier requires this information)
           properties:
             fullName:
@@ -16524,7 +16524,7 @@ components:
               x-examples:
                 example-1:
                   redemptionMethod: DIGITAL
-                  utcRedeemedAt: null
+                  utcRedeemedAt:
                   deliveryOptions:
                     - deliveryFormat: QRCODE
                       deliveryValue: '!1|El3f0wUmcnrEmviMcR9qwqC9hvfrcWc6cZcRcrcR|yrirfZfqHPj40mvhpw2XzX|q7FF77QqFD7fDhr9'
@@ -16532,7 +16532,7 @@ components:
                       deliveryValue: https://api.ventrata.com/octo/pdf?booking=36d2d844-121d-453c-b514-de027caaf27f&ticket=72419a19-c58c-46a0-b316-13509de43909
               examples:
                 - redemptionMethod: DIGITAL
-                  utcRedeemedAt: null
+                  utcRedeemedAt:
                   deliveryOptions:
                     - deliveryFormat: QRCODE
                       deliveryValue: string
@@ -16611,7 +16611,7 @@ components:
           unit:
             id: string
             internalName: string
-            reference: null
+            reference:
             type: ADULT
             requiredContactFields:
               - firstName
@@ -16620,25 +16620,25 @@ components:
               maxAge: 99
               idRequired: false
               minQuantity: 0
-              maxQuantity: null
+              maxQuantity:
               paxCount: 0
               accompaniedBy: []
           status: CONFIRMED
-          utcRedeemedAt: null
+          utcRedeemedAt:
           contact:
             fullName: John Doe
             firstName: John
             lastName: Doe
-            emailAddress: null
-            phoneNumber: null
+            emailAddress:
+            phoneNumber:
             locales:
               - en
-            postalCode: null
-            country: null
-            notes: null
+            postalCode:
+            country:
+            notes:
           ticket:
             redemptionMethod: DIGITAL
-            utcRedeemedAt: null
+            utcRedeemedAt:
             deliveryOptions:
               - deliveryFormat: QRCODE
                 deliveryValue: string
@@ -16647,7 +16647,7 @@ components:
       x-examples:
         example-1:
           redemptionMethod: DIGITAL
-          utcRedeemedAt: null
+          utcRedeemedAt:
           deliveryOptions:
             - deliveryFormat: QRCODE
               deliveryValue: '!1|El3f0wUmcnrEmviMcR9qwqC9hvfrcWc6cZcRcrcR|yrirfZfqHPj40mvhpw2XzX|q7FF77QqFD7fDhr9'
@@ -16655,7 +16655,7 @@ components:
               deliveryValue: https://api.ventrata.com/octo/pdf?booking=36d2d844-121d-453c-b514-de027caaf27f&ticket=72419a19-c58c-46a0-b316-13509de43909
       examples:
         - redemptionMethod: DIGITAL
-          utcRedeemedAt: null
+          utcRedeemedAt:
           deliveryOptions:
             - deliveryFormat: QRCODE
               deliveryValue: string
@@ -16719,26 +16719,26 @@ components:
       type: object
       x-examples:
         example-1:
-          fullName: null
-          firstName: null
-          lastName: null
-          emailAddress: null
-          phoneNumber: null
+          fullName:
+          firstName:
+          lastName:
+          emailAddress:
+          phoneNumber:
           locales: []
-          postalCode: null
-          country: null
-          notes: null
+          postalCode:
+          country:
+          notes:
       examples:
         - fullName: John Doe
           firstName: John
           lastName: Doe
           emailAddress: johndoe@email.com
-          phoneNumber: null
+          phoneNumber:
           locales:
             - en
-          postalCode: null
-          country: null
-          notes: null
+          postalCode:
+          country:
+          notes:
       description: Contact details for the guests that will attend the tour/attraction. Contact schema can be applied to both the booking object (the main reservation) or the unit object (individual ticket holders - if the supplier requires this information)
       properties:
         fullName:
@@ -16804,8 +16804,8 @@ components:
           status: CONFIRMED
           utcCreatedAt: '2021-10-27T23:28:43Z'
           utcUpdatedAt: '2021-10-27T23:28:45Z'
-          utcExpiresAt: null
-          utcRedeemedAt: null
+          utcExpiresAt:
+          utcRedeemedAt:
           utcConfirmedAt: '2021-10-27T23:28:45Z'
           productId: 5379ce46-0620-42ce-b65c-70d6fc1c9ac2
       examples: []
@@ -16895,7 +16895,7 @@ components:
             example-1:
               id: 28ca088b-bc7b-4746-ab06-5971f1ed5a5e
               internalName: Edinburgh Hop-On Hop-Off Bus Tour
-              reference: null
+              reference:
               locale: en
               timeZone: Europe/London
               allowFreesale: true
@@ -17069,7 +17069,7 @@ components:
                     id: DEFAULT
                     default: true
                     internalName: DEFAULT
-                    reference: null
+                    reference:
                     availabilityLocalStartTimes:
                       - '00:00'
                     cancellationCutoff: 1 hour
@@ -17181,7 +17181,7 @@ components:
                         maxUnits: 9
                     description: An object containing a fixed list of restrictions for booking the option.
                     examples:
-                      - minUnits: null
+                      - minUnits:
                         maxUnits: 10
                     properties:
                       minUnits:
@@ -17208,7 +17208,7 @@ components:
                         example-1:
                           id: unit_c1709f42-297e-4f7e-bd6b-3e77d4622d8a
                           internalName: Adult
-                          reference: null
+                          reference:
                           type: ADULT
                           requiredContactFields: []
                       examples:
@@ -17288,7 +17288,7 @@ components:
                               maxAge: 100
                               idRequired: false
                               minQuantity: 1
-                              maxQuantity: null
+                              maxQuantity:
                               paxCount: 4
                               accompaniedBy: []
                           description: unit restrictions
@@ -17388,7 +17388,7 @@ components:
               id: DEFAULT
               default: true
               internalName: DEFAULT
-              reference: null
+              reference:
               availabilityLocalStartTimes:
                 - '00:00'
               cancellationCutoff: 1 hour
@@ -17500,7 +17500,7 @@ components:
                   maxUnits: 9
               description: An object containing a fixed list of restrictions for booking the option.
               examples:
-                - minUnits: null
+                - minUnits:
                   maxUnits: 10
               properties:
                 minUnits:
@@ -17527,7 +17527,7 @@ components:
                   example-1:
                     id: unit_c1709f42-297e-4f7e-bd6b-3e77d4622d8a
                     internalName: Adult
-                    reference: null
+                    reference:
                     type: ADULT
                     requiredContactFields: []
                 examples:
@@ -17607,7 +17607,7 @@ components:
                         maxAge: 100
                         idRequired: false
                         minQuantity: 1
-                        maxQuantity: null
+                        maxQuantity:
                         paxCount: 4
                         accompaniedBy: []
                     description: unit restrictions
@@ -17768,26 +17768,26 @@ components:
           type: object
           x-examples:
             example-1:
-              fullName: null
-              firstName: null
-              lastName: null
-              emailAddress: null
-              phoneNumber: null
+              fullName:
+              firstName:
+              lastName:
+              emailAddress:
+              phoneNumber:
               locales: []
-              postalCode: null
-              country: null
-              notes: null
+              postalCode:
+              country:
+              notes:
           examples:
             - fullName: John Doe
               firstName: John
               lastName: Doe
               emailAddress: johndoe@email.com
-              phoneNumber: null
+              phoneNumber:
               locales:
                 - en
-              postalCode: null
-              country: null
-              notes: null
+              postalCode:
+              country:
+              notes:
           description: Contact details for the guests that will attend the tour/attraction. Contact schema can be applied to both the booking object (the main reservation) or the unit object (individual ticket holders - if the supplier requires this information)
           properties:
             fullName:
@@ -17870,7 +17870,7 @@ components:
               x-examples:
                 example-1:
                   redemptionMethod: DIGITAL
-                  utcRedeemedAt: null
+                  utcRedeemedAt:
                   deliveryOptions:
                     - deliveryFormat: QRCODE
                       deliveryValue: '!1|El3f0wUmcnrEmviMcR9qwqC9hvfrcWc6cZcRcrcR|yrirfZfqHPj40mvhpw2XzX|q7FF77QqFD7fDhr9'
@@ -17878,7 +17878,7 @@ components:
                       deliveryValue: https://api.ventrata.com/octo/pdf?booking=36d2d844-121d-453c-b514-de027caaf27f&ticket=72419a19-c58c-46a0-b316-13509de43909
               examples:
                 - redemptionMethod: DIGITAL
-                  utcRedeemedAt: null
+                  utcRedeemedAt:
                   deliveryOptions:
                     - deliveryFormat: QRCODE
                       deliveryValue: string
@@ -17976,7 +17976,7 @@ components:
                   example-1:
                     id: unit_c1709f42-297e-4f7e-bd6b-3e77d4622d8a
                     internalName: Adult
-                    reference: null
+                    reference:
                     type: ADULT
                     requiredContactFields: []
                 examples:
@@ -18056,7 +18056,7 @@ components:
                         maxAge: 100
                         idRequired: false
                         minQuantity: 1
-                        maxQuantity: null
+                        maxQuantity:
                         paxCount: 4
                         accompaniedBy: []
                     description: unit restrictions
@@ -18152,26 +18152,26 @@ components:
                 type: object
                 x-examples:
                   example-1:
-                    fullName: null
-                    firstName: null
-                    lastName: null
-                    emailAddress: null
-                    phoneNumber: null
+                    fullName:
+                    firstName:
+                    lastName:
+                    emailAddress:
+                    phoneNumber:
                     locales: []
-                    postalCode: null
-                    country: null
-                    notes: null
+                    postalCode:
+                    country:
+                    notes:
                 examples:
                   - fullName: John Doe
                     firstName: John
                     lastName: Doe
                     emailAddress: johndoe@email.com
-                    phoneNumber: null
+                    phoneNumber:
                     locales:
                       - en
-                    postalCode: null
-                    country: null
-                    notes: null
+                    postalCode:
+                    country:
+                    notes:
                 description: Contact details for the guests that will attend the tour/attraction. Contact schema can be applied to both the booking object (the main reservation) or the unit object (individual ticket holders - if the supplier requires this information)
                 properties:
                   fullName:
@@ -18231,7 +18231,7 @@ components:
                     x-examples:
                       example-1:
                         redemptionMethod: DIGITAL
-                        utcRedeemedAt: null
+                        utcRedeemedAt:
                         deliveryOptions:
                           - deliveryFormat: QRCODE
                             deliveryValue: '!1|El3f0wUmcnrEmviMcR9qwqC9hvfrcWc6cZcRcrcR|yrirfZfqHPj40mvhpw2XzX|q7FF77QqFD7fDhr9'
@@ -18239,7 +18239,7 @@ components:
                             deliveryValue: https://api.ventrata.com/octo/pdf?booking=36d2d844-121d-453c-b514-de027caaf27f&ticket=72419a19-c58c-46a0-b316-13509de43909
                     examples:
                       - redemptionMethod: DIGITAL
-                        utcRedeemedAt: null
+                        utcRedeemedAt:
                         deliveryOptions:
                           - deliveryFormat: QRCODE
                             deliveryValue: string
@@ -18318,7 +18318,7 @@ components:
                 unit:
                   id: string
                   internalName: string
-                  reference: null
+                  reference:
                   type: ADULT
                   requiredContactFields:
                     - firstName
@@ -18327,25 +18327,25 @@ components:
                     maxAge: 99
                     idRequired: false
                     minQuantity: 0
-                    maxQuantity: null
+                    maxQuantity:
                     paxCount: 0
                     accompaniedBy: []
                 status: CONFIRMED
-                utcRedeemedAt: null
+                utcRedeemedAt:
                 contact:
                   fullName: John Doe
                   firstName: John
                   lastName: Doe
-                  emailAddress: null
-                  phoneNumber: null
+                  emailAddress:
+                  phoneNumber:
                   locales:
                     - en
-                  postalCode: null
-                  country: null
-                  notes: null
+                  postalCode:
+                  country:
+                  notes:
                 ticket:
                   redemptionMethod: DIGITAL
-                  utcRedeemedAt: null
+                  utcRedeemedAt:
                   deliveryOptions:
                     - deliveryFormat: QRCODE
                       deliveryValue: string
@@ -18383,9 +18383,9 @@ components:
           allDay: true
           available: true
           status: FREESALE
-          vacancies: null
-          capacity: null
-          maxUnits: null
+          vacancies:
+          capacity:
+          maxUnits:
           utcCutoffAt: '2022-06-29T22:00:00Z'
           openingHours:
             - from: '09:00'
@@ -18400,7 +18400,7 @@ components:
           status: AVAILABLE
           vacancies: 10
           capacity: 10
-          maxUnits: null
+          maxUnits:
           utcCutoffAt: '2022-06-30T10:00:00Z'
           openingHours: []
         - id: '2022-06-30T14:00:00+01:00'
@@ -18411,7 +18411,7 @@ components:
           status: AVAILABLE
           vacancies: 10
           capacity: 10
-          maxUnits: null
+          maxUnits:
           utcCutoffAt: '2022-06-30T12:00:00Z'
           openingHours: []
     AvailabilityCalendarOpeningHours:
@@ -18419,24 +18419,24 @@ components:
         - localDate: '2022-06-14'
           available: true
           status: FREESALE
-          vacancies: null
-          capacity: null
+          vacancies:
+          capacity:
           openingHours:
             - from: '09:00'
               to: '17:00'
         - localDate: '2022-06-15'
           available: true
           status: FREESALE
-          vacancies: null
-          capacity: null
+          vacancies:
+          capacity:
           openingHours:
             - from: '09:00'
               to: '17:00'
         - localDate: '2022-06-16'
           available: true
           status: FREESALE
-          vacancies: null
-          capacity: null
+          vacancies:
+          capacity:
           openingHours:
             - from: '09:00'
               to: '17:00'
@@ -18506,19 +18506,19 @@ components:
         id: 602a9fdf-5c79-4984-9474-7e14da9b6027
         uuid: a88b4b8d-9c3b-4a09-ba27-323b43af57e4
         testMode: true
-        resellerReference: null
+        resellerReference:
         supplierReference: XOPSUT
         status: ON_HOLD
         utcCreatedAt: '2022-05-25T10:34:22Z'
         utcUpdatedAt: '2022-05-25T10:34:22Z'
         utcExpiresAt: '2022-05-25T11:04:22Z'
-        utcRedeemedAt: null
-        utcConfirmedAt: null
+        utcRedeemedAt:
+        utcConfirmedAt:
         productId: '1'
         product:
           id: '1'
           internalName: PPU | OH
-          reference: null
+          reference:
           locale: en
           timeZone: Europe/London
           allowFreesale: false
@@ -18537,7 +18537,7 @@ components:
             - id: DEFAULT
               default: true
               internalName: DEFAULT
-              reference: null
+              reference:
               availabilityLocalStartTimes:
                 - '00:00'
               cancellationCutoff: 0 hours
@@ -18546,7 +18546,7 @@ components:
               requiredContactFields: []
               restrictions:
                 minUnits: 0
-                maxUnits: null
+                maxUnits:
               units:
                 - id: adult
                   internalName: adult
@@ -18557,8 +18557,8 @@ components:
                     minAge: 18
                     maxAge: 100
                     idRequired: false
-                    minQuantity: null
-                    maxQuantity: null
+                    minQuantity:
+                    maxQuantity:
                     paxCount: 1
                     accompaniedBy: []
         optionId: DEFAULT
@@ -18566,7 +18566,7 @@ components:
           id: DEFAULT
           default: true
           internalName: DEFAULT
-          reference: null
+          reference:
           availabilityLocalStartTimes:
             - '00:00'
           cancellationCutoff: 0 hours
@@ -18575,7 +18575,7 @@ components:
           requiredContactFields: []
           restrictions:
             minUnits: 0
-            maxUnits: null
+            maxUnits:
           units:
             - id: adult
               internalName: adult
@@ -18586,12 +18586,12 @@ components:
                 minAge: 18
                 maxAge: 100
                 idRequired: false
-                minQuantity: null
-                maxQuantity: null
+                minQuantity:
+                maxQuantity:
                 paxCount: 1
                 accompaniedBy: []
         cancellable: true
-        cancellation: null
+        cancellation:
         freesale: false
         availabilityId: '2022-04-30T00:00:00+01:00'
         availability:
@@ -18603,25 +18603,25 @@ components:
             - from: '09:00'
               to: '17:00'
         contact:
-          fullName: null
-          firstName: null
-          lastName: null
-          emailAddress: null
-          phoneNumber: null
+          fullName:
+          firstName:
+          lastName:
+          emailAddress:
+          phoneNumber:
           locales: []
-          country: null
-          notes: null
-        notes: null
+          country:
+          notes:
+        notes:
         deliveryMethods:
           - TICKET
           - VOUCHER
         voucher:
           redemptionMethod: DIGITAL
-          utcRedeemedAt: null
+          utcRedeemedAt:
           deliveryOptions: []
         unitItems:
           - uuid: 6cbd2582-1345-4d8d-8223-ad004beebc1a
-            resellerReference: null
+            resellerReference:
             supplierReference: CBIYWQ
             unit:
               id: adult
@@ -18633,44 +18633,44 @@ components:
                 minAge: 18
                 maxAge: 100
                 idRequired: false
-                minQuantity: null
-                maxQuantity: null
+                minQuantity:
+                maxQuantity:
                 paxCount: 1
                 accompaniedBy: []
             unitId: adult
             status: ON_HOLD
-            utcRedeemedAt: null
+            utcRedeemedAt:
             contact:
-              fullName: null
-              firstName: null
-              lastName: null
-              emailAddress: null
-              phoneNumber: null
+              fullName:
+              firstName:
+              lastName:
+              emailAddress:
+              phoneNumber:
               locales: []
-              country: null
-              notes: null
+              country:
+              notes:
             ticket:
               redemptionMethod: DIGITAL
-              utcRedeemedAt: null
+              utcRedeemedAt:
               deliveryOptions: []
     BookingConfirmed:
       value:
         id: 3ac5450f-8511-4386-9feb-17ce4f9e1f86
         uuid: ec0ce0c2-03f0-4c64-bbc5-5e0f7d1e1c0a
         testMode: true
-        resellerReference: null
+        resellerReference:
         supplierReference: ALG6RQ
         status: CONFIRMED
         utcCreatedAt: '2022-05-25T11:03:22Z'
         utcUpdatedAt: '2022-05-25T11:03:31Z'
-        utcExpiresAt: null
-        utcRedeemedAt: null
+        utcExpiresAt:
+        utcRedeemedAt:
         utcConfirmedAt: '2022-05-25T11:03:31Z'
         productId: '1'
         product:
           id: '1'
           internalName: PPU | OH
-          reference: null
+          reference:
           locale: en
           timeZone: Europe/London
           allowFreesale: false
@@ -18689,7 +18689,7 @@ components:
             - id: DEFAULT
               default: true
               internalName: DEFAULT
-              reference: null
+              reference:
               availabilityLocalStartTimes:
                 - '00:00'
               cancellationCutoff: 0 hours
@@ -18698,7 +18698,7 @@ components:
               requiredContactFields: []
               restrictions:
                 minUnits: 0
-                maxUnits: null
+                maxUnits:
               units:
                 - id: adult
                   internalName: adult
@@ -18709,8 +18709,8 @@ components:
                     minAge: 18
                     maxAge: 100
                     idRequired: false
-                    minQuantity: null
-                    maxQuantity: null
+                    minQuantity:
+                    maxQuantity:
                     paxCount: 1
                     accompaniedBy: []
         optionId: DEFAULT
@@ -18718,7 +18718,7 @@ components:
           id: DEFAULT
           default: true
           internalName: DEFAULT
-          reference: null
+          reference:
           availabilityLocalStartTimes:
             - '00:00'
           cancellationCutoff: 0 hours
@@ -18727,7 +18727,7 @@ components:
           requiredContactFields: []
           restrictions:
             minUnits: 0
-            maxUnits: null
+            maxUnits:
           units:
             - id: adult
               internalName: adult
@@ -18738,12 +18738,12 @@ components:
                 minAge: 18
                 maxAge: 100
                 idRequired: false
-                minQuantity: null
-                maxQuantity: null
+                minQuantity:
+                maxQuantity:
                 paxCount: 1
                 accompaniedBy: []
         cancellable: true
-        cancellation: null
+        cancellation:
         freesale: false
         availabilityId: '2022-04-30T00:00:00+01:00'
         availability:
@@ -18759,17 +18759,17 @@ components:
           firstName: John
           lastName: Doe
           emailAddress: johndoe@email.com
-          phoneNumber: null
+          phoneNumber:
           locales: []
-          country: null
-          notes: null
-        notes: null
+          country:
+          notes:
+        notes:
         deliveryMethods:
           - TICKET
           - VOUCHER
         voucher:
           redemptionMethod: DIGITAL
-          utcRedeemedAt: null
+          utcRedeemedAt:
           deliveryOptions:
             - deliveryFormat: PDF_URL
               deliveryValue: https://api.octomock.com/octo/pdf?booking=ec0ce0c2-03f0-4c64-bbc5-5e0f7d1e1c0a
@@ -18777,7 +18777,7 @@ components:
               deliveryValue: ALG6RQ
         unitItems:
           - uuid: 25ec5429-d563-45f9-ba5b-85b03edbf65e
-            resellerReference: null
+            resellerReference:
             supplierReference: EO6Q0P
             unit:
               id: adult
@@ -18789,25 +18789,25 @@ components:
                 minAge: 18
                 maxAge: 100
                 idRequired: false
-                minQuantity: null
-                maxQuantity: null
+                minQuantity:
+                maxQuantity:
                 paxCount: 1
                 accompaniedBy: []
             unitId: adult
             status: ON_HOLD
-            utcRedeemedAt: null
+            utcRedeemedAt:
             contact:
-              fullName: null
-              firstName: null
-              lastName: null
-              emailAddress: null
-              phoneNumber: null
+              fullName:
+              firstName:
+              lastName:
+              emailAddress:
+              phoneNumber:
               locales: []
-              country: null
-              notes: null
+              country:
+              notes:
             ticket:
               redemptionMethod: DIGITAL
-              utcRedeemedAt: null
+              utcRedeemedAt:
               deliveryOptions:
                 - deliveryFormat: PDF_URL
                   deliveryValue: https://api.octomock.com/octo/pdf?booking=ec0ce0c2-03f0-4c64-bbc5-5e0f7d1e1c0a&ticket=25ec5429-d563-45f9-ba5b-85b03edbf65e
@@ -18818,19 +18818,19 @@ components:
         id: 3ac5450f-8511-4386-9feb-17ce4f9e1f86
         uuid: ec0ce0c2-03f0-4c64-bbc5-5e0f7d1e1c0a
         testMode: true
-        resellerReference: null
+        resellerReference:
         supplierReference: ALG6RQ
         status: CANCELLED
         utcCreatedAt: '2022-05-25T11:03:22Z'
         utcUpdatedAt: '2022-05-25T11:06:24Z'
-        utcExpiresAt: null
-        utcRedeemedAt: null
-        utcConfirmedAt: null
+        utcExpiresAt:
+        utcRedeemedAt:
+        utcConfirmedAt:
         productId: '1'
         product:
           id: '1'
           internalName: PPU | OH
-          reference: null
+          reference:
           locale: en
           timeZone: Europe/London
           allowFreesale: false
@@ -18849,7 +18849,7 @@ components:
             - id: DEFAULT
               default: true
               internalName: DEFAULT
-              reference: null
+              reference:
               availabilityLocalStartTimes:
                 - '00:00'
               cancellationCutoff: 0 hours
@@ -18858,7 +18858,7 @@ components:
               requiredContactFields: []
               restrictions:
                 minUnits: 0
-                maxUnits: null
+                maxUnits:
               units:
                 - id: adult
                   internalName: adult
@@ -18869,8 +18869,8 @@ components:
                     minAge: 18
                     maxAge: 100
                     idRequired: false
-                    minQuantity: null
-                    maxQuantity: null
+                    minQuantity:
+                    maxQuantity:
                     paxCount: 1
                     accompaniedBy: []
         optionId: DEFAULT
@@ -18878,7 +18878,7 @@ components:
           id: DEFAULT
           default: true
           internalName: DEFAULT
-          reference: null
+          reference:
           availabilityLocalStartTimes:
             - '00:00'
           cancellationCutoff: 0 hours
@@ -18887,7 +18887,7 @@ components:
           requiredContactFields: []
           restrictions:
             minUnits: 0
-            maxUnits: null
+            maxUnits:
           units:
             - id: adult
               internalName: adult
@@ -18898,8 +18898,8 @@ components:
                 minAge: 18
                 maxAge: 100
                 idRequired: false
-                minQuantity: null
-                maxQuantity: null
+                minQuantity:
+                maxQuantity:
                 paxCount: 1
                 accompaniedBy: []
         cancellable: false
@@ -18918,21 +18918,21 @@ components:
             - from: '09:00'
               to: '17:00'
         contact:
-          fullName: null
-          firstName: null
-          lastName: null
-          emailAddress: null
-          phoneNumber: null
+          fullName:
+          firstName:
+          lastName:
+          emailAddress:
+          phoneNumber:
           locales: []
-          country: null
-          notes: null
-        notes: null
+          country:
+          notes:
+        notes:
         deliveryMethods:
           - TICKET
           - VOUCHER
         voucher:
           redemptionMethod: DIGITAL
-          utcRedeemedAt: null
+          utcRedeemedAt:
           deliveryOptions: []
         unitItems: []
     BookingUpdated:
@@ -18940,19 +18940,19 @@ components:
         id: 3ef65048-5ffe-474f-8a5c-fb35a9faa6ed
         uuid: 814d2566-2c71-4e6a-aaa9-59b9bf26cc0d
         testMode: true
-        resellerReference: null
+        resellerReference:
         supplierReference: RNSRSM
         status: CONFIRMED
         utcCreatedAt: '2022-05-25T11:07:05Z'
         utcUpdatedAt: '2022-05-25T11:09:32Z'
-        utcExpiresAt: null
-        utcRedeemedAt: null
+        utcExpiresAt:
+        utcRedeemedAt:
         utcConfirmedAt: '2022-05-25T11:09:32Z'
         productId: '1'
         product:
           id: '1'
           internalName: PPU | OH
-          reference: null
+          reference:
           locale: en
           timeZone: Europe/London
           allowFreesale: false
@@ -18971,7 +18971,7 @@ components:
             - id: DEFAULT
               default: true
               internalName: DEFAULT
-              reference: null
+              reference:
               availabilityLocalStartTimes:
                 - '00:00'
               cancellationCutoff: 0 hours
@@ -18980,7 +18980,7 @@ components:
               requiredContactFields: []
               restrictions:
                 minUnits: 0
-                maxUnits: null
+                maxUnits:
               units:
                 - id: adult
                   internalName: adult
@@ -18991,8 +18991,8 @@ components:
                     minAge: 18
                     maxAge: 100
                     idRequired: false
-                    minQuantity: null
-                    maxQuantity: null
+                    minQuantity:
+                    maxQuantity:
                     paxCount: 1
                     accompaniedBy: []
         optionId: DEFAULT
@@ -19000,7 +19000,7 @@ components:
           id: DEFAULT
           default: true
           internalName: DEFAULT
-          reference: null
+          reference:
           availabilityLocalStartTimes:
             - '00:00'
           cancellationCutoff: 0 hours
@@ -19009,7 +19009,7 @@ components:
           requiredContactFields: []
           restrictions:
             minUnits: 0
-            maxUnits: null
+            maxUnits:
           units:
             - id: adult
               internalName: adult
@@ -19020,12 +19020,12 @@ components:
                 minAge: 18
                 maxAge: 100
                 idRequired: false
-                minQuantity: null
-                maxQuantity: null
+                minQuantity:
+                maxQuantity:
                 paxCount: 1
                 accompaniedBy: []
         cancellable: true
-        cancellation: null
+        cancellation:
         freesale: false
         availabilityId: '2022-04-30T00:00:00+01:00'
         availability:
@@ -19038,20 +19038,20 @@ components:
               to: '17:00'
         contact:
           fullName: test
-          firstName: null
-          lastName: null
+          firstName:
+          lastName:
           emailAddress: test@test.test
-          phoneNumber: null
+          phoneNumber:
           locales: []
-          country: null
-          notes: null
-        notes: null
+          country:
+          notes:
+        notes:
         deliveryMethods:
           - TICKET
           - VOUCHER
         voucher:
           redemptionMethod: DIGITAL
-          utcRedeemedAt: null
+          utcRedeemedAt:
           deliveryOptions:
             - deliveryFormat: PDF_URL
               deliveryValue: https://api.octomock.com/octo/pdf?booking=814d2566-2c71-4e6a-aaa9-59b9bf26cc0d
@@ -19059,7 +19059,7 @@ components:
               deliveryValue: RNSRSM
         unitItems:
           - uuid: a204e6de-7909-4bf2-b7a8-2884189534bc
-            resellerReference: null
+            resellerReference:
             supplierReference: 1LTYVC
             unit:
               id: adult
@@ -19071,32 +19071,32 @@ components:
                 minAge: 18
                 maxAge: 100
                 idRequired: false
-                minQuantity: null
-                maxQuantity: null
+                minQuantity:
+                maxQuantity:
                 paxCount: 1
                 accompaniedBy: []
             unitId: adult
             status: ON_HOLD
-            utcRedeemedAt: null
+            utcRedeemedAt:
             contact:
-              fullName: null
-              firstName: null
-              lastName: null
-              emailAddress: null
-              phoneNumber: null
+              fullName:
+              firstName:
+              lastName:
+              emailAddress:
+              phoneNumber:
               locales: []
-              country: null
-              notes: null
+              country:
+              notes:
             ticket:
               redemptionMethod: DIGITAL
-              utcRedeemedAt: null
+              utcRedeemedAt:
               deliveryOptions:
                 - deliveryFormat: PDF_URL
                   deliveryValue: https://api.octomock.com/octo/pdf?booking=814d2566-2c71-4e6a-aaa9-59b9bf26cc0d&ticket=a204e6de-7909-4bf2-b7a8-2884189534bc
                 - deliveryFormat: QRCODE
                   deliveryValue: 1LTYVC
           - uuid: 9116e598-6713-4cb5-8ba4-e5b839f7a5d5
-            resellerReference: null
+            resellerReference:
             supplierReference: A89VR8
             unit:
               id: adult
@@ -19108,25 +19108,25 @@ components:
                 minAge: 18
                 maxAge: 100
                 idRequired: false
-                minQuantity: null
-                maxQuantity: null
+                minQuantity:
+                maxQuantity:
                 paxCount: 1
                 accompaniedBy: []
             unitId: adult
             status: ON_HOLD
-            utcRedeemedAt: null
+            utcRedeemedAt:
             contact:
-              fullName: null
-              firstName: null
-              lastName: null
-              emailAddress: null
-              phoneNumber: null
+              fullName:
+              firstName:
+              lastName:
+              emailAddress:
+              phoneNumber:
               locales: []
-              country: null
-              notes: null
+              country:
+              notes:
             ticket:
               redemptionMethod: DIGITAL
-              utcRedeemedAt: null
+              utcRedeemedAt:
               deliveryOptions:
                 - deliveryFormat: PDF_URL
                   deliveryValue: https://api.octomock.com/octo/pdf?booking=814d2566-2c71-4e6a-aaa9-59b9bf26cc0d&ticket=9116e598-6713-4cb5-8ba4-e5b839f7a5d5
@@ -19822,7 +19822,7 @@ components:
                     - en
                   country: GB
       description: ''
-      security: null
+      security:
 externalDocs:
   url: https://docs.octo.travel/
   description: OCTO Developer Hub
