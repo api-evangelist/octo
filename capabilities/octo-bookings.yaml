@@ -1,0 +1,375 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Open Connectivity for Tours, Activities, and Attractions OCTO API Specification — Bookings
+  description: 'Open Connectivity for Tours, Activities, and Attractions OCTO API Specification — Bookings. 7 operations.
+    Lead operation: Open Connectivity for Tours, Activities, and Attractions Booking Reservation. Self-contained Naftiko capability
+    covering one Octo business surface.'
+  tags:
+  - Octo
+  - Bookings
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    OCTO_API_KEY: OCTO_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: octo-bookings
+    baseUri: https://api.example.com/octo
+    description: Open Connectivity for Tours, Activities, and Attractions OCTO API Specification — Bookings business capability.
+      Self-contained, no shared references.
+    resources:
+    - name: bookings
+      path: /bookings
+      operations:
+      - name: postbookings
+        method: POST
+        description: Open Connectivity for Tours, Activities, and Attractions Booking Reservation
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: Content-Type
+          in: header
+          type: string
+          description: Required field on all POST requests
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+      - name: getbookings
+        method: GET
+        description: Open Connectivity for Tours, Activities, and Attractions Get Bookings
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: resellerReference
+          in: query
+          type: string
+          description: The reseller reference on the booking
+        - name: supplierReference
+          in: query
+          type: string
+          description: The reference provided by the supplier
+        - name: localDate
+          in: query
+          type: string
+          description: All bookings made for a specific date
+        - name: localDateStart
+          in: query
+          type: string
+          description: First date of a date range search
+        - name: localDateEnd
+          in: query
+          type: string
+          description: Last date of a date range search
+        - name: productId
+          in: query
+          type: string
+          description: The product id to filter by
+        - name: optionId
+          in: query
+          type: string
+          description: The option id to filter by
+    - name: bookings-uuid
+      path: /bookings/{uuid}
+      operations:
+      - name: getbookingsuuid
+        method: GET
+        description: Open Connectivity for Tours, Activities, and Attractions Get Booking
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: patchbookingsuuid
+        method: PATCH
+        description: Open Connectivity for Tours, Activities, and Attractions Booking Update
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: Content-Type
+          in: header
+          type: string
+          description: Required field on all PATCH requests
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: bookings-uuid-cancel
+      path: /bookings/{uuid}/cancel
+      operations:
+      - name: deletebookingsuuid
+        method: POST
+        description: Open Connectivity for Tours, Activities, and Attractions Booking Cancellation
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: Content-Type
+          in: header
+          type: string
+          description: Required field on all DELETE requests
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: bookings-uuid-confirm
+      path: /bookings/{uuid}/confirm
+      operations:
+      - name: postbookingsuuidconfirm
+        method: POST
+        description: Open Connectivity for Tours, Activities, and Attractions Booking Confirmation
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: Content-Type
+          in: header
+          type: string
+          description: Required field on all POST requests
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: bookings-uuid-extend
+      path: /bookings/{uuid}/extend
+      operations:
+      - name: postbookingsuuidextend
+        method: POST
+        description: Open Connectivity for Tours, Activities, and Attractions Extend Reservation
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: Content-Type
+          in: header
+          type: string
+          description: Required field on all POST requests
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    authentication:
+      type: bearer
+      token: '{{env.OCTO_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: octo-bookings-rest
+    port: 8080
+    description: REST adapter for Open Connectivity for Tours, Activities, and Attractions OCTO API Specification — Bookings.
+      One Spectral-compliant resource per consumed operation, prefixed with /v1.
+    resources:
+    - path: /v1/bookings
+      name: bookings
+      description: REST surface for bookings.
+      operations:
+      - method: POST
+        name: postbookings
+        description: Open Connectivity for Tours, Activities, and Attractions Booking Reservation
+        call: octo-bookings.postbookings
+        with:
+          Content-Type: rest.Content-Type
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: GET
+        name: getbookings
+        description: Open Connectivity for Tours, Activities, and Attractions Get Bookings
+        call: octo-bookings.getbookings
+        with:
+          resellerReference: rest.resellerReference
+          supplierReference: rest.supplierReference
+          localDate: rest.localDate
+          localDateStart: rest.localDateStart
+          localDateEnd: rest.localDateEnd
+          productId: rest.productId
+          optionId: rest.optionId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/bookings/{uuid}
+      name: bookings-uuid
+      description: REST surface for bookings-uuid.
+      operations:
+      - method: GET
+        name: getbookingsuuid
+        description: Open Connectivity for Tours, Activities, and Attractions Get Booking
+        call: octo-bookings.getbookingsuuid
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PATCH
+        name: patchbookingsuuid
+        description: Open Connectivity for Tours, Activities, and Attractions Booking Update
+        call: octo-bookings.patchbookingsuuid
+        with:
+          Content-Type: rest.Content-Type
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/bookings/{uuid}/cancel
+      name: bookings-uuid-cancel
+      description: REST surface for bookings-uuid-cancel.
+      operations:
+      - method: POST
+        name: deletebookingsuuid
+        description: Open Connectivity for Tours, Activities, and Attractions Booking Cancellation
+        call: octo-bookings.deletebookingsuuid
+        with:
+          Content-Type: rest.Content-Type
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/bookings/{uuid}/confirm
+      name: bookings-uuid-confirm
+      description: REST surface for bookings-uuid-confirm.
+      operations:
+      - method: POST
+        name: postbookingsuuidconfirm
+        description: Open Connectivity for Tours, Activities, and Attractions Booking Confirmation
+        call: octo-bookings.postbookingsuuidconfirm
+        with:
+          Content-Type: rest.Content-Type
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/bookings/{uuid}/extend
+      name: bookings-uuid-extend
+      description: REST surface for bookings-uuid-extend.
+      operations:
+      - method: POST
+        name: postbookingsuuidextend
+        description: Open Connectivity for Tours, Activities, and Attractions Extend Reservation
+        call: octo-bookings.postbookingsuuidextend
+        with:
+          Content-Type: rest.Content-Type
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: octo-bookings-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Open Connectivity for Tours, Activities, and Attractions OCTO API Specification — Bookings.
+      One tool per consumed operation, routed inline through this capability's consumes block.
+    tools:
+    - name: open-connectivity-tours-activities-and
+      description: Open Connectivity for Tours, Activities, and Attractions Booking Reservation
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: octo-bookings.postbookings
+      with:
+        Content-Type: tools.Content-Type
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: open-connectivity-tours-activities-and-2
+      description: Open Connectivity for Tours, Activities, and Attractions Get Bookings
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: octo-bookings.getbookings
+      with:
+        resellerReference: tools.resellerReference
+        supplierReference: tools.supplierReference
+        localDate: tools.localDate
+        localDateStart: tools.localDateStart
+        localDateEnd: tools.localDateEnd
+        productId: tools.productId
+        optionId: tools.optionId
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: open-connectivity-tours-activities-and-3
+      description: Open Connectivity for Tours, Activities, and Attractions Get Booking
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: octo-bookings.getbookingsuuid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: open-connectivity-tours-activities-and-4
+      description: Open Connectivity for Tours, Activities, and Attractions Booking Update
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: octo-bookings.patchbookingsuuid
+      with:
+        Content-Type: tools.Content-Type
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: open-connectivity-tours-activities-and-5
+      description: Open Connectivity for Tours, Activities, and Attractions Booking Cancellation
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: octo-bookings.deletebookingsuuid
+      with:
+        Content-Type: tools.Content-Type
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: open-connectivity-tours-activities-and-6
+      description: Open Connectivity for Tours, Activities, and Attractions Booking Confirmation
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: octo-bookings.postbookingsuuidconfirm
+      with:
+        Content-Type: tools.Content-Type
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: open-connectivity-tours-activities-and-7
+      description: Open Connectivity for Tours, Activities, and Attractions Extend Reservation
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: octo-bookings.postbookingsuuidextend
+      with:
+        Content-Type: tools.Content-Type
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.

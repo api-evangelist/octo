@@ -1,0 +1,114 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Open Connectivity for Tours, Activities, and Attractions OCTO API Specification — Products
+  description: 'Open Connectivity for Tours, Activities, and Attractions OCTO API Specification — Products. 2 operations.
+    Lead operation: Open Connectivity for Tours, Activities, and Attractions Get Products. Self-contained Naftiko capability
+    covering one Octo business surface.'
+  tags:
+  - Octo
+  - Products
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    OCTO_API_KEY: OCTO_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: octo-products
+    baseUri: https://api.example.com/octo
+    description: Open Connectivity for Tours, Activities, and Attractions OCTO API Specification — Products business capability.
+      Self-contained, no shared references.
+    resources:
+    - name: products
+      path: /products
+      operations:
+      - name: get
+        method: GET
+        description: Open Connectivity for Tours, Activities, and Attractions Get Products
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: products-id
+      path: /products/{id}
+      operations:
+      - name: get
+        method: GET
+        description: Open Connectivity for Tours, Activities, and Attractions Get Product
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: id
+          in: path
+          type: string
+          description: The product id
+          required: true
+    authentication:
+      type: bearer
+      token: '{{env.OCTO_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: octo-products-rest
+    port: 8080
+    description: REST adapter for Open Connectivity for Tours, Activities, and Attractions OCTO API Specification — Products.
+      One Spectral-compliant resource per consumed operation, prefixed with /v1.
+    resources:
+    - path: /v1/products
+      name: products
+      description: REST surface for products.
+      operations:
+      - method: GET
+        name: get
+        description: Open Connectivity for Tours, Activities, and Attractions Get Products
+        call: octo-products.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/products/{id}
+      name: products-id
+      description: REST surface for products-id.
+      operations:
+      - method: GET
+        name: get
+        description: Open Connectivity for Tours, Activities, and Attractions Get Product
+        call: octo-products.get
+        with:
+          id: rest.id
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: octo-products-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Open Connectivity for Tours, Activities, and Attractions OCTO API Specification — Products.
+      One tool per consumed operation, routed inline through this capability's consumes block.
+    tools:
+    - name: open-connectivity-tours-activities-and
+      description: Open Connectivity for Tours, Activities, and Attractions Get Products
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: octo-products.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: open-connectivity-tours-activities-and-2
+      description: Open Connectivity for Tours, Activities, and Attractions Get Product
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: octo-products.get
+      with:
+        id: tools.id
+      outputParameters:
+      - type: object
+        mapping: $.

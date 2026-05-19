@@ -1,0 +1,124 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Open Connectivity for Tours, Activities, and Attractions OCTO API Specification — Availability
+  description: 'Open Connectivity for Tours, Activities, and Attractions OCTO API Specification — Availability. 2 operations.
+    Lead operation: Open Connectivity for Tours, Activities, and Attractions Availability Check. Self-contained Naftiko capability
+    covering one Octo business surface.'
+  tags:
+  - Octo
+  - Availability
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    OCTO_API_KEY: OCTO_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: octo-availability
+    baseUri: https://api.example.com/octo
+    description: Open Connectivity for Tours, Activities, and Attractions OCTO API Specification — Availability business capability.
+      Self-contained, no shared references.
+    resources:
+    - name: availability
+      path: /availability
+      operations:
+      - name: post
+        method: POST
+        description: Open Connectivity for Tours, Activities, and Attractions Availability Check
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: availability-calendar
+      path: /availability/calendar
+      operations:
+      - name: post
+        method: POST
+        description: Open Connectivity for Tours, Activities, and Attractions Availability Calendar
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    authentication:
+      type: bearer
+      token: '{{env.OCTO_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: octo-availability-rest
+    port: 8080
+    description: REST adapter for Open Connectivity for Tours, Activities, and Attractions OCTO API Specification — Availability.
+      One Spectral-compliant resource per consumed operation, prefixed with /v1.
+    resources:
+    - path: /v1/availability
+      name: availability
+      description: REST surface for availability.
+      operations:
+      - method: POST
+        name: post
+        description: Open Connectivity for Tours, Activities, and Attractions Availability Check
+        call: octo-availability.post
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/availability/calendar
+      name: availability-calendar
+      description: REST surface for availability-calendar.
+      operations:
+      - method: POST
+        name: post
+        description: Open Connectivity for Tours, Activities, and Attractions Availability Calendar
+        call: octo-availability.post
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: octo-availability-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Open Connectivity for Tours, Activities, and Attractions OCTO API Specification — Availability.
+      One tool per consumed operation, routed inline through this capability's consumes block.
+    tools:
+    - name: open-connectivity-tours-activities-and
+      description: Open Connectivity for Tours, Activities, and Attractions Availability Check
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: octo-availability.post
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: open-connectivity-tours-activities-and-2
+      description: Open Connectivity for Tours, Activities, and Attractions Availability Calendar
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: octo-availability.post
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
