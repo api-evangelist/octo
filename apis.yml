@@ -49,6 +49,8 @@ common:
     url: https://docs.octo.travel/getting-started/authentication
   - type: Support
     url: https://docs.octo.travel/getting-started/development-support
+  - type: LLMsTxt
+    url: https://docs.octo.travel/llms.txt
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
