@@ -30,13 +30,13 @@ apis:
       url: https://docs.octo.travel/
     - type: OpenAPI
       url: openapi/octo-openapi-original.yml
-    - type: NaftikoCapability
+    - type: X-NaftikoCapability
       url: capabilities/octo-availability.yaml
-    - type: NaftikoCapability
+    - type: X-NaftikoCapability
       url: capabilities/octo-bookings.yaml
-    - type: NaftikoCapability
+    - type: X-NaftikoCapability
       url: capabilities/octo-products.yaml
-    - type: NaftikoCapability
+    - type: X-NaftikoCapability
       url: capabilities/octo-supplier.yaml
 common:
   - type: GitHubOrganization
@@ -49,7 +49,7 @@ common:
     url: https://docs.octo.travel/getting-started/authentication
   - type: Support
     url: https://docs.octo.travel/getting-started/development-support
-  - type: LLMsTxt
+  - type: LlmsText
     url: https://docs.octo.travel/llms.txt
 maintainers:
   - FN: Kin Lane
