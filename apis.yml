@@ -39,6 +39,10 @@ apis:
     - type: X-NaftikoCapability
       url: capabilities/octo-supplier.yaml
 common:
+  - type: DomainSecurity
+    url: security/octo-domain-security.yml
+  - type: Authentication
+    url: authentication/octo-authentication.yml
   - type: GitHubOrganization
     url: https://github.com/OctoConsulting
   - type: Documentation
