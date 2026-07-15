@@ -39,6 +39,8 @@ apis:
     - type: X-NaftikoCapability
       url: capabilities/octo-supplier.yaml
 common:
+  - type: AgenticAccess
+    url: agentic-access/octo-agentic-access.yml
   - type: DomainSecurity
     url: security/octo-domain-security.yml
   - type: Authentication
