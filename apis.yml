@@ -5,7 +5,20 @@ description: OCTO (Open Connectivity for Tours, Activities, and Attractions) is 
   commonly needed when connecting platforms, resellers, OTAs, and other technologies in tours, activities, and attractions.
   OCTO is open source.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/octo.png
 tags:
   - Activities
   - Attractions
@@ -17,27 +30,90 @@ created: '2024-06-07'
 modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
-  - aid: octo:octo
-    name: Open Connectivity for Tours, Activities, and Attractions
-    description: OCTO API specification for connecting tours, activities, and attractions platforms with resellers and OTAs.
-    humanURL: https://docs.octo.travel/
-    tags:
-    - Activities
-    - Tours
-    - Travel
-    properties:
-    - type: Documentation
-      url: https://docs.octo.travel/
-    - type: OpenAPI
-      url: openapi/octo-openapi-original.yml
-    - type: X-NaftikoCapability
-      url: capabilities/octo-availability.yaml
-    - type: X-NaftikoCapability
-      url: capabilities/octo-bookings.yaml
-    - type: X-NaftikoCapability
-      url: capabilities/octo-products.yaml
-    - type: X-NaftikoCapability
-      url: capabilities/octo-supplier.yaml
+- aid: octo:octo-availability-api
+  name: Open Connectivity for Tours, Activities, and Attractions Availability API
+  description: >-
+    The Availability API from Open Connectivity for Tours, Activities, and Attractions — 2 operation(s)
+    for availability.
+  humanURL: https://docs.octo.travel/
+  tags:
+  - Availability
+  properties:
+  - type: OpenAPI
+    url: openapi/octo-availability-api-openapi.yml
+  - type: Documentation
+    url: https://docs.octo.travel/
+  - type: X-NaftikoCapability
+    url: capabilities/octo-availability.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/octo-bookings.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/octo-products.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/octo-supplier.yaml
+- aid: octo:octo-bookings-api
+  name: Open Connectivity for Tours, Activities, and Attractions Bookings API
+  description: >-
+    The Bookings API from Open Connectivity for Tours, Activities, and Attractions — 5 operation(s) for
+    bookings.
+  humanURL: https://docs.octo.travel/
+  tags:
+  - Bookings
+  properties:
+  - type: OpenAPI
+    url: openapi/octo-bookings-api-openapi.yml
+  - type: Documentation
+    url: https://docs.octo.travel/
+  - type: X-NaftikoCapability
+    url: capabilities/octo-availability.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/octo-bookings.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/octo-products.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/octo-supplier.yaml
+- aid: octo:octo-products-api
+  name: Open Connectivity for Tours, Activities, and Attractions Products API
+  description: >-
+    The Products API from Open Connectivity for Tours, Activities, and Attractions — 2 operation(s) for
+    products.
+  humanURL: https://docs.octo.travel/
+  tags:
+  - Products
+  properties:
+  - type: OpenAPI
+    url: openapi/octo-products-api-openapi.yml
+  - type: Documentation
+    url: https://docs.octo.travel/
+  - type: X-NaftikoCapability
+    url: capabilities/octo-availability.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/octo-bookings.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/octo-products.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/octo-supplier.yaml
+- aid: octo:octo-supplier-api
+  name: Open Connectivity for Tours, Activities, and Attractions Supplier API
+  description: >-
+    The Supplier API from Open Connectivity for Tours, Activities, and Attractions — 1 operation(s) for
+    supplier.
+  humanURL: https://docs.octo.travel/
+  tags:
+  - Supplier
+  properties:
+  - type: OpenAPI
+    url: openapi/octo-supplier-api-openapi.yml
+  - type: Documentation
+    url: https://docs.octo.travel/
+  - type: X-NaftikoCapability
+    url: capabilities/octo-availability.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/octo-bookings.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/octo-products.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/octo-supplier.yaml
 common:
   - type: AgenticAccess
     url: agentic-access/octo-agentic-access.yml
