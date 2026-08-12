@@ -43,14 +43,6 @@ apis:
     url: openapi/octo-availability-api-openapi.yml
   - type: Documentation
     url: https://docs.octo.travel/
-  - type: X-NaftikoCapability
-    url: capabilities/octo-availability.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/octo-bookings.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/octo-products.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/octo-supplier.yaml
 - aid: octo:octo-bookings-api
   name: Open Connectivity for Tours, Activities, and Attractions Bookings API
   description: >-
@@ -64,14 +56,6 @@ apis:
     url: openapi/octo-bookings-api-openapi.yml
   - type: Documentation
     url: https://docs.octo.travel/
-  - type: X-NaftikoCapability
-    url: capabilities/octo-availability.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/octo-bookings.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/octo-products.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/octo-supplier.yaml
 - aid: octo:octo-products-api
   name: Open Connectivity for Tours, Activities, and Attractions Products API
   description: >-
@@ -85,14 +69,6 @@ apis:
     url: openapi/octo-products-api-openapi.yml
   - type: Documentation
     url: https://docs.octo.travel/
-  - type: X-NaftikoCapability
-    url: capabilities/octo-availability.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/octo-bookings.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/octo-products.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/octo-supplier.yaml
 - aid: octo:octo-supplier-api
   name: Open Connectivity for Tours, Activities, and Attractions Supplier API
   description: >-
@@ -106,14 +82,6 @@ apis:
     url: openapi/octo-supplier-api-openapi.yml
   - type: Documentation
     url: https://docs.octo.travel/
-  - type: X-NaftikoCapability
-    url: capabilities/octo-availability.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/octo-bookings.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/octo-products.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/octo-supplier.yaml
 common:
   - type: AgenticAccess
     url: agentic-access/octo-agentic-access.yml
