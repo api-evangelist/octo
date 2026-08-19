@@ -1,0 +1,26 @@
+# OCTO Developer Hub
+
+## OCTO API Developer Hub
+
+- [Welcome](https://docs.octo.travel/readme.md)
+- [Glossary of Terms](https://docs.octo.travel/getting-started/glossary-of-terms.md)
+- [Errors](https://docs.octo.travel/getting-started/errors.md)
+- [Headers](https://docs.octo.travel/getting-started/headers.md)
+- [Authentication](https://docs.octo.travel/getting-started/authentication.md)
+- [Endpoints & Capabilities](https://docs.octo.travel/getting-started/endpoints-and-capabilities.md)
+- [Schemas](https://docs.octo.travel/getting-started/schemas.md)
+- [Development Support](https://docs.octo.travel/getting-started/development-support.md)
+- [Supplier](https://docs.octo.travel/octo-api-core/supplier.md): Returns the supplier and associated contact details
+- [Products](https://docs.octo.travel/octo-api-core/products.md): Fetch the product for the given id or the list of products available to you.
+- [Availability](https://docs.octo.travel/octo-api-core/availability.md)
+- [Bookings](https://docs.octo.travel/octo-api-core/bookings.md)
+- [Pricing](https://docs.octo.travel/capabilities-optional/pricing.md): Adds pricing fields to various endpoints
+- [Notifications](https://docs.octo.travel/capabilities-optional/notifications.md): Notifications on changes to product, availability or booking
+- [Content](https://docs.octo.travel/capabilities-optional/content.md): Adds extra content fields to OCTO Core object schemas on select endpoints to provide detailed descriptive information about supplier, products, options, units, booking, etc.
+- [Pickups \[NEW\]](https://docs.octo.travel/capabilities-optional/pickups-new.md): Adds structured pickup support, allowing predefined or customer-defined pickup locations, including pickup time windows.
+- [Dropoffs \[NEW\]](https://docs.octo.travel/capabilities-optional/dropoffs-new.md): Adds structured dropoff support, allowing predefined or customer-defined end-of-tour return locations, including time-window details.
+- [Promotions \[IN DEV\]](https://docs.octo.travel/capabilities-optional/promotions-in-dev.md): Adds promotional pricing to availability and bookings, exposing promotional offers and their details.
+- [Slack Workspace](https://docs.octo.travel/additional-resources/slack-workspace.md)
+- [Self-Certification Tool](https://docs.octo.travel/additional-resources/self-certification-tool.md)
+- [Postman Collections](https://docs.octo.travel/additional-resources/postman-collections.md)
+- [Known Implementations](https://docs.octo.travel/additional-resources/known-implementations.md): See who already uses OCTO

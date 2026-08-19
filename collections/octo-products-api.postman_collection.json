@@ -1,0 +1,190 @@
+{
+  "item": [
+    {
+      "id": "ab08341b-eed5-495d-89c9-77d947e46089",
+      "name": "Products",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f964da7f-5509-40c6-a258-2f97a769daab",
+          "name": "Open Connectivity for Tours, Activities, and Attractions Get Products",
+          "request": {
+            "name": "Open Connectivity for Tours, Activities, and Attractions Get Products",
+            "description": {
+              "content": "Fetch the list of products.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "products"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b1f2613d-8155-4030-8b31-ca06927be02f",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"6b903d44-dc24-4ca4-ae71-6bde6c4f4854\",\n    \"internalName\": \"Amazon River Tour\",\n    \"reference\": null,\n    \"locale\": \"en-GB\",\n    \"allowFreesale\": true,\n    \"instantConfirmation\": true,\n    \"instantDelivery\": false,\n    \"availabilityRequired\": true,\n    \"availabilityType\": \"START_TIME\",\n    \"deliveryFormats\": [\n      \"QRCODE\",\n      \"QRCODE\"\n    ],\n    \"deliveryMethods\": [\n      \"VOUCHER\",\n      \"VOUCHER\"\n    ],\n    \"redemptionMethod\": \"DIGITAL\",\n    \"options\": [\n      {\n        \"id\": \"DEFAULT\",\n        \"default\": true,\n        \"internalName\": \"Private Morning Tour\",\n        \"reference\": null,\n        \"availabilityLocalStartTimes\": [\n          \"09:00\",\n          \"09:00\"\n        ],\n        \"cancellationCutoff\": \"1 hour\",\n        \"cancellationCutoffAmount\": 1,\n        \"cancellationCutoffUnit\": \"hour\",\n        \"requiredContactFields\": [\n          \"firstName\",\n          \"firstName\"\n        ],\n        \"restrictions\": {\n          \"minUnits\": 0,\n          \"maxUnits\": 10\n        },\n        \"units\": [\n          {\n            \"id\": \"adult_697e3ce8-1860-4cbf-80ad-95857df1f640\",\n            \"internalName\": \"Adult(s)\",\n            \"type\": \"ADULT\",\n            \"requiredContactFields\": [\n              \"firstName\",\n              \"firstName\"\n            ],\n            \"restrictions\": {\n              \"minAge\": 3,\n              \"maxAge\": 17,\n              \"idRequired\": false,\n              \"minQuantity\": 2,\n              \"maxQuantity\": null,\n              \"paxCount\": 1,\n              \"accompaniedBy\": [\n                \"adult_697e3ce8-1860-4cbf-80ad-95857df1f640\",\n                \"adult_697e3ce8-1860-4cbf-80ad-95857df1f640\"\n              ]\n            },\n            \"reference\": null\n          },\n          {\n            \"id\": \"adult_697e3ce8-1860-4cbf-80ad-95857df1f640\",\n            \"internalName\": \"Adult(s)\",\n            \"type\": \"ADULT\",\n            \"requiredContactFields\": [\n              \"firstName\",\n              \"firstName\"\n            ],\n            \"restrictions\": {\n              \"minAge\": 3,\n              \"maxAge\": 17,\n              \"idRequired\": false,\n              \"minQuantity\": 2,\n              \"maxQuantity\": null,\n              \"paxCount\": 1,\n              \"accompaniedBy\": [\n                \"adult_697e3ce8-1860-4cbf-80ad-95857df1f640\",\n                \"adult_697e3ce8-1860-4cbf-80ad-95857df1f640\"\n              ]\n            },\n            \"reference\": null\n          }\n        ]\n      },\n      {\n        \"id\": \"DEFAULT\",\n        \"default\": true,\n        \"internalName\": \"Private Morning Tour\",\n        \"reference\": null,\n        \"availabilityLocalStartTimes\": [\n          \"09:00\",\n          \"09:00\"\n        ],\n        \"cancellationCutoff\": \"1 hour\",\n        \"cancellationCutoffAmount\": 1,\n        \"cancellationCutoffUnit\": \"hour\",\n        \"requiredContactFields\": [\n          \"firstName\",\n          \"firstName\"\n        ],\n        \"restrictions\": {\n          \"minUnits\": 0,\n          \"maxUnits\": 10\n        },\n        \"units\": [\n          {\n            \"id\": \"adult_697e3ce8-1860-4cbf-80ad-95857df1f640\",\n            \"internalName\": \"Adult(s)\",\n            \"type\": \"ADULT\",\n            \"requiredContactFields\": [\n              \"firstName\",\n              \"firstName\"\n            ],\n            \"restrictions\": {\n              \"minAge\": 3,\n              \"maxAge\": 17,\n              \"idRequired\": false,\n              \"minQuantity\": 2,\n              \"maxQuantity\": null,\n              \"paxCount\": 1,\n              \"accompaniedBy\": [\n                \"adult_697e3ce8-1860-4cbf-80ad-95857df1f640\",\n                \"adult_697e3ce8-1860-4cbf-80ad-95857df1f640\"\n              ]\n            },\n            \"reference\": null\n          },\n          {\n            \"id\": \"adult_697e3ce8-1860-4cbf-80ad-95857df1f640\",\n            \"internalName\": \"Adult(s)\",\n            \"type\": \"ADULT\",\n            \"requiredContactFields\": [\n              \"firstName\",\n              \"firstName\"\n            ],\n            \"restrictions\": {\n              \"minAge\": 3,\n              \"maxAge\": 17,\n              \"idRequired\": false,\n              \"minQuantity\": 2,\n              \"maxQuantity\": null,\n              \"paxCount\": 1,\n              \"accompaniedBy\": [\n                \"adult_697e3ce8-1860-4cbf-80ad-95857df1f640\",\n                \"adult_697e3ce8-1860-4cbf-80ad-95857df1f640\"\n              ]\n            },\n            \"reference\": null\n          }\n        ]\n      }\n    ],\n    \"timeZone\": \"Europe/London\"\n  },\n  {\n    \"id\": \"6b903d44-dc24-4ca4-ae71-6bde6c4f4854\",\n    \"internalName\": \"Amazon River Tour\",\n    \"reference\": null,\n    \"locale\": \"en-GB\",\n    \"allowFreesale\": false,\n    \"instantConfirmation\": false,\n    \"instantDelivery\": false,\n    \"availabilityRequired\": false,\n    \"availabilityType\": \"START_TIME\",\n    \"deliveryFormats\": [\n      \"QRCODE\",\n      \"QRCODE\"\n    ],\n    \"deliveryMethods\": [\n      \"VOUCHER\",\n      \"VOUCHER\"\n    ],\n    \"redemptionMethod\": \"DIGITAL\",\n    \"options\": [\n      {\n        \"id\": \"DEFAULT\",\n        \"default\": false,\n        \"internalName\": \"Private Morning Tour\",\n        \"reference\": null,\n        \"availabilityLocalStartTimes\": [\n          \"09:00\",\n          \"09:00\"\n        ],\n        \"cancellationCutoff\": \"1 hour\",\n        \"cancellationCutoffAmount\": 1,\n        \"cancellationCutoffUnit\": \"hour\",\n        \"requiredContactFields\": [\n          \"firstName\",\n          \"firstName\"\n        ],\n        \"restrictions\": {\n          \"minUnits\": 0,\n          \"maxUnits\": 10\n        },\n        \"units\": [\n          {\n            \"id\": \"adult_697e3ce8-1860-4cbf-80ad-95857df1f640\",\n            \"internalName\": \"Adult(s)\",\n            \"type\": \"ADULT\",\n            \"requiredContactFields\": [\n              \"firstName\",\n              \"firstName\"\n            ],\n            \"restrictions\": {\n              \"minAge\": 3,\n              \"maxAge\": 17,\n              \"idRequired\": true,\n              \"minQuantity\": 2,\n              \"maxQuantity\": null,\n              \"paxCount\": 1,\n              \"accompaniedBy\": [\n                \"adult_697e3ce8-1860-4cbf-80ad-95857df1f640\",\n                \"adult_697e3ce8-1860-4cbf-80ad-95857df1f640\"\n              ]\n            },\n            \"reference\": null\n          },\n          {\n            \"id\": \"adult_697e3ce8-1860-4cbf-80ad-95857df1f640\",\n            \"internalName\": \"Adult(s)\",\n            \"type\": \"ADULT\",\n            \"requiredContactFields\": [\n              \"firstName\",\n              \"firstName\"\n            ],\n            \"restrictions\": {\n              \"minAge\": 3,\n              \"maxAge\": 17,\n              \"idRequired\": false,\n              \"minQuantity\": 2,\n              \"maxQuantity\": null,\n              \"paxCount\": 1,\n              \"accompaniedBy\": [\n                \"adult_697e3ce8-1860-4cbf-80ad-95857df1f640\",\n                \"adult_697e3ce8-1860-4cbf-80ad-95857df1f640\"\n              ]\n            },\n            \"reference\": null\n          }\n        ]\n      },\n      {\n        \"id\": \"DEFAULT\",\n        \"default\": false,\n        \"internalName\": \"Private Morning Tour\",\n        \"reference\": null,\n        \"availabilityLocalStartTimes\": [\n          \"09:00\",\n          \"09:00\"\n        ],\n        \"cancellationCutoff\": \"1 hour\",\n        \"cancellationCutoffAmount\": 1,\n        \"cancellationCutoffUnit\": \"hour\",\n        \"requiredContactFields\": [\n          \"firstName\",\n          \"firstName\"\n        ],\n        \"restrictions\": {\n          \"minUnits\": 0,\n          \"maxUnits\": 10\n        },\n        \"units\": [\n          {\n            \"id\": \"adult_697e3ce8-1860-4cbf-80ad-95857df1f640\",\n            \"internalName\": \"Adult(s)\",\n            \"type\": \"ADULT\",\n            \"requiredContactFields\": [\n              \"firstName\",\n              \"firstName\"\n            ],\n            \"restrictions\": {\n              \"minAge\": 3,\n              \"maxAge\": 17,\n              \"idRequired\": true,\n              \"minQuantity\": 2,\n              \"maxQuantity\": null,\n              \"paxCount\": 1,\n              \"accompaniedBy\": [\n                \"adult_697e3ce8-1860-4cbf-80ad-95857df1f640\",\n                \"adult_697e3ce8-1860-4cbf-80ad-95857df1f640\"\n              ]\n            },\n            \"reference\": null\n          },\n          {\n            \"id\": \"adult_697e3ce8-1860-4cbf-80ad-95857df1f640\",\n            \"internalName\": \"Adult(s)\",\n            \"type\": \"ADULT\",\n            \"requiredContactFields\": [\n              \"firstName\",\n              \"firstName\"\n            ],\n            \"restrictions\": {\n              \"minAge\": 3,\n              \"maxAge\": 17,\n              \"idRequired\": true,\n              \"minQuantity\": 2,\n              \"maxQuantity\": null,\n              \"paxCount\": 1,\n              \"accompaniedBy\": [\n                \"adult_697e3ce8-1860-4cbf-80ad-95857df1f640\",\n                \"adult_697e3ce8-1860-4cbf-80ad-95857df1f640\"\n              ]\n            },\n            \"reference\": null\n          }\n        ]\n      }\n    ],\n    \"timeZone\": \"Europe/London\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4b307811-4434-4aa3-8120-aab37a302907",
+          "name": "Open Connectivity for Tours, Activities, and Attractions Get Product",
+          "request": {
+            "name": "Open Connectivity for Tours, Activities, and Attractions Get Product",
+            "description": {
+              "content": "Fetch the product for the given id.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "products",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) The product id"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3abe0116-a7f5-4b85-b775-62a8adef634a",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) The product id"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"6b903d44-dc24-4ca4-ae71-6bde6c4f4854\",\n  \"internalName\": \"Amazon River Tour\",\n  \"reference\": null,\n  \"locale\": \"en-GB\",\n  \"allowFreesale\": true,\n  \"instantConfirmation\": false,\n  \"instantDelivery\": true,\n  \"availabilityRequired\": true,\n  \"availabilityType\": \"START_TIME\",\n  \"deliveryFormats\": [\n    \"QRCODE\",\n    \"QRCODE\"\n  ],\n  \"deliveryMethods\": [\n    \"VOUCHER\",\n    \"VOUCHER\"\n  ],\n  \"redemptionMethod\": \"DIGITAL\",\n  \"options\": [\n    {\n      \"id\": \"DEFAULT\",\n      \"default\": true,\n      \"internalName\": \"Private Morning Tour\",\n      \"reference\": null,\n      \"availabilityLocalStartTimes\": [\n        \"09:00\",\n        \"09:00\"\n      ],\n      \"cancellationCutoff\": \"1 hour\",\n      \"cancellationCutoffAmount\": 1,\n      \"cancellationCutoffUnit\": \"hour\",\n      \"requiredContactFields\": [\n        \"firstName\",\n        \"firstName\"\n      ],\n      \"restrictions\": {\n        \"minUnits\": 0,\n        \"maxUnits\": 10\n      },\n      \"units\": [\n        {\n          \"id\": \"adult_697e3ce8-1860-4cbf-80ad-95857df1f640\",\n          \"internalName\": \"Adult(s)\",\n          \"type\": \"ADULT\",\n          \"requiredContactFields\": [\n            \"firstName\",\n            \"firstName\"\n          ],\n          \"restrictions\": {\n            \"minAge\": 3,\n            \"maxAge\": 17,\n            \"idRequired\": true,\n            \"minQuantity\": 2,\n            \"maxQuantity\": null,\n            \"paxCount\": 1,\n            \"accompaniedBy\": [\n              \"adult_697e3ce8-1860-4cbf-80ad-95857df1f640\",\n              \"adult_697e3ce8-1860-4cbf-80ad-95857df1f640\"\n            ]\n          },\n          \"reference\": null\n        },\n        {\n          \"id\": \"adult_697e3ce8-1860-4cbf-80ad-95857df1f640\",\n          \"internalName\": \"Adult(s)\",\n          \"type\": \"ADULT\",\n          \"requiredContactFields\": [\n            \"firstName\",\n            \"firstName\"\n          ],\n          \"restrictions\": {\n            \"minAge\": 3,\n            \"maxAge\": 17,\n            \"idRequired\": true,\n            \"minQuantity\": 2,\n            \"maxQuantity\": null,\n            \"paxCount\": 1,\n            \"accompaniedBy\": [\n              \"adult_697e3ce8-1860-4cbf-80ad-95857df1f640\",\n              \"adult_697e3ce8-1860-4cbf-80ad-95857df1f640\"\n            ]\n          },\n          \"reference\": null\n        }\n      ]\n    },\n    {\n      \"id\": \"DEFAULT\",\n      \"default\": true,\n      \"internalName\": \"Private Morning Tour\",\n      \"reference\": null,\n      \"availabilityLocalStartTimes\": [\n        \"09:00\",\n        \"09:00\"\n      ],\n      \"cancellationCutoff\": \"1 hour\",\n      \"cancellationCutoffAmount\": 1,\n      \"cancellationCutoffUnit\": \"hour\",\n      \"requiredContactFields\": [\n        \"firstName\",\n        \"firstName\"\n      ],\n      \"restrictions\": {\n        \"minUnits\": 0,\n        \"maxUnits\": 10\n      },\n      \"units\": [\n        {\n          \"id\": \"adult_697e3ce8-1860-4cbf-80ad-95857df1f640\",\n          \"internalName\": \"Adult(s)\",\n          \"type\": \"ADULT\",\n          \"requiredContactFields\": [\n            \"firstName\",\n            \"firstName\"\n          ],\n          \"restrictions\": {\n            \"minAge\": 3,\n            \"maxAge\": 17,\n            \"idRequired\": false,\n            \"minQuantity\": 2,\n            \"maxQuantity\": null,\n            \"paxCount\": 1,\n            \"accompaniedBy\": [\n              \"adult_697e3ce8-1860-4cbf-80ad-95857df1f640\",\n              \"adult_697e3ce8-1860-4cbf-80ad-95857df1f640\"\n            ]\n          },\n          \"reference\": null\n        },\n        {\n          \"id\": \"adult_697e3ce8-1860-4cbf-80ad-95857df1f640\",\n          \"internalName\": \"Adult(s)\",\n          \"type\": \"ADULT\",\n          \"requiredContactFields\": [\n            \"firstName\",\n            \"firstName\"\n          ],\n          \"restrictions\": {\n            \"minAge\": 3,\n            \"maxAge\": 17,\n            \"idRequired\": true,\n            \"minQuantity\": 2,\n            \"maxQuantity\": null,\n            \"paxCount\": 1,\n            \"accompaniedBy\": [\n              \"adult_697e3ce8-1860-4cbf-80ad-95857df1f640\",\n              \"adult_697e3ce8-1860-4cbf-80ad-95857df1f640\"\n            ]\n          },\n          \"reference\": null\n        }\n      ]\n    }\n  ],\n  \"timeZone\": \"Europe/London\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.example.com/octo",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "4c96f34c-c582-4b87-b802-8435fa06685d",
+    "name": "Open Connectivity for Tours, Activities, and Attractions OCTO API Specification Availability Products API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "OCTO (Open Connectivity for Tours, Activities, and Attractions) is an open standard API specification for the in-destination experiences sector of the travel industry. The standard defines agreed-upon schemas, endpoints, and capabilities commonly needed when connecting platforms, resellers, OTAs, and other technologies in tours, activities, and attractions. \n\nOCTO is open source. Available to anyone who wants to use it. You do not need to be a member to use this specification in your business.\n\nContact Support:\n Name: OCTO Standards NP Inc\n Email: sayhello@octo.travel",
+      "type": "text/plain"
+    }
+  }
+}

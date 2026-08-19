@@ -1,0 +1,102 @@
+{
+  "item": [
+    {
+      "id": "1193a539-b283-4e16-bdb2-40863cb8a222",
+      "name": "Supplier",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "2a17f42b-4b8c-46b0-8cd6-a9a2d168c582",
+          "name": "Open Connectivity for Tours, Activities, and Attractions Get Supplier",
+          "request": {
+            "name": "Open Connectivity for Tours, Activities, and Attractions Get Supplier",
+            "description": {
+              "content": "Returns the supplier and associated contact details.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "supplier"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "23204ef5-12c6-4996-be8a-b514f3480c05",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "supplier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"697e3ce8-1860-4cbf-80ad-95857df1f640\",\n  \"name\": \"Edin Explore\",\n  \"endpoint\": \"https://api.my-booking-platform.com/v1\",\n  \"contact\": {\n    \"website\": null,\n    \"email\": null,\n    \"telephone\": null,\n    \"address\": null\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.example.com/octo",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "73b19b53-ab43-44cb-8e3b-36a139c58323",
+    "name": "Open Connectivity for Tours, Activities, and Attractions OCTO API Specification Availability Supplier API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "OCTO (Open Connectivity for Tours, Activities, and Attractions) is an open standard API specification for the in-destination experiences sector of the travel industry. The standard defines agreed-upon schemas, endpoints, and capabilities commonly needed when connecting platforms, resellers, OTAs, and other technologies in tours, activities, and attractions. \n\nOCTO is open source. Available to anyone who wants to use it. You do not need to be a member to use this specification in your business.\n\nContact Support:\n Name: OCTO Standards NP Inc\n Email: sayhello@octo.travel",
+      "type": "text/plain"
+    }
+  }
+}
