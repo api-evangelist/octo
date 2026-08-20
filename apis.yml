@@ -63,6 +63,8 @@ apis:
     products.
   humanURL: https://docs.octo.travel/
   tags:
+  - Product
+  tags_raw:
   - Products
   properties:
   - type: OpenAPI
