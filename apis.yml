@@ -5,6 +5,17 @@ description: OCTO (Open Connectivity for Tours, Activities, and Attractions) is 
   commonly needed when connecting platforms, resellers, OTAs, and other technologies in tours, activities, and attractions.
   OCTO is open source.
 type: Index
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - openapi
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
