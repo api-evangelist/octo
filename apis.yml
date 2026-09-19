@@ -62,6 +62,8 @@ apis:
     bookings.
   humanURL: https://docs.octo.travel/
   tags:
+  - Booking
+  tags_raw:
   - Bookings
   properties:
   - type: OpenAPI
