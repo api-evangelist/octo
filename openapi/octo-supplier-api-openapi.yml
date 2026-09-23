@@ -1,12 +1,15 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Open Connectivity for Tours, Activities, and Attractions OCTO API Specification Availability Supplier API
+  title: Open Connectivity for Tours, Activities, and Attractions…
   version: '1.0'
   contact:
     email: sayhello@octo.travel
     url: https://www.octo.travel/contact
     name: OCTO Standards NP Inc
-  description: "OCTO (Open Connectivity for Tours, Activities, and Attractions) is an open standard API specification for the in-destination experiences sector of the travel industry. The standard defines agreed-upon schemas, endpoints, and capabilities commonly needed when connecting platforms, resellers, OTAs, and other technologies in tours, activities, and attractions. \n\nOCTO is open source. Available to anyone who wants to use it. You do not need to be a member to use this specification in your business."
+  description: 'OCTO (Open Connectivity for Tours, Activities, and Attractions) is an open standard API specification for the in-destination experiences sector of the travel industry. The standard defines agreed-upon schemas, endpoints, and capabilities commonly needed when connecting platforms, resellers, OTAs, and other technologies in tours, activities, and attractions.
+
+
+    OCTO is open source. Available to anyone who wants to use it. You do not need to be a member to use this specification in your business.'
 servers:
 - url: https://api.example.com/octo
 tags:
@@ -100,6 +103,8 @@ paths:
                 - endpoint
                 - contact
       description: Returns the supplier and associated contact details.
+      operationId: getSupplier
+      x-operation-id-source: derived
 components:
   securitySchemes:
     Auth:

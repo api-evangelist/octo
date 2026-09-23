@@ -1,12 +1,15 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Open Connectivity for Tours, Activities, and Attractions OCTO API Specification Availability API
+  title: Open Connectivity for Tours, Activities, and Attractions…
   version: '1.0'
   contact:
     email: sayhello@octo.travel
     url: https://www.octo.travel/contact
     name: OCTO Standards NP Inc
-  description: "OCTO (Open Connectivity for Tours, Activities, and Attractions) is an open standard API specification for the in-destination experiences sector of the travel industry. The standard defines agreed-upon schemas, endpoints, and capabilities commonly needed when connecting platforms, resellers, OTAs, and other technologies in tours, activities, and attractions. \n\nOCTO is open source. Available to anyone who wants to use it. You do not need to be a member to use this specification in your business."
+  description: 'OCTO (Open Connectivity for Tours, Activities, and Attractions) is an open standard API specification for the in-destination experiences sector of the travel industry. The standard defines agreed-upon schemas, endpoints, and capabilities commonly needed when connecting platforms, resellers, OTAs, and other technologies in tours, activities, and attractions.
+
+
+    OCTO is open source. Available to anyone who wants to use it. You do not need to be a member to use this specification in your business.'
 servers:
 - url: https://api.example.com/octo
 tags:
@@ -276,6 +279,8 @@ paths:
 
 
         When the end user selects an open date you can call on `/availability` endpoint to get the `availabilityId` to create the booking.'
+      operationId: postAvailabilityCalendar
+      x-operation-id-source: derived
   /availability:
     post:
       summary: Open Connectivity for Tours, Activities, and Attractions Availability Check
@@ -593,6 +598,8 @@ paths:
         - `localeDateStart` and `localDateEnd`
 
         - `availabilityIds`'
+      operationId: postAvailability
+      x-operation-id-source: derived
 components:
   securitySchemes:
     Auth:
