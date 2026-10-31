@@ -1,4 +1,4 @@
-# Open Connectivity for Tours, Activities, and Attractions (octo)
+# Open Connectivity for Tours, Activities, and Attractions
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,49 +66,122 @@
 
 OCTO (Open Connectivity for Tours, Activities, and Attractions) is an open standard API specification for the in-destination experiences sector of the travel industry. The standard defines agreed-upon schemas, endpoints, and capabilities commonly needed when connecting platforms, resellers, OTAs, and other technologies in tours, activities, and attractions. OCTO is open source.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/octo/refs/heads/main/apis.yml)
+**Areas:** Activities · Attractions · Open Standard · Tours · Travel
 
-## Scope
+## Open Connectivity for Tours, Activities, and Attractions on APIs.io
 
-- **Type:** Index 
-- **Position:** Consuming 
-- **Access:** 3rd-Party 
+Everything profiled for Open Connectivity for Tours, Activities, and Attractions is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/octo/](https://apis.io/providers/octo/)** — or go straight to one of the APIs or properties below.
 
-## Tags:
+### APIs (4)
 
- - Travel, Tours, Activities, Attractions, Open Standard
+- [Open Connectivity for Tours, Activities, and Attractions Availability API](https://apis.io/apis/octo/octo-availability-api/) — The Availability API from Open Connectivity for Tours, Activities, and Attractions — 2 operation(s) for availability.
+- [Open Connectivity for Tours, Activities, and Attractions Bookings API](https://apis.io/apis/octo/octo-bookings-api/) — The Bookings API from Open Connectivity for Tours, Activities, and Attractions — 5 operation(s) for bookings.
+- [Open Connectivity for Tours, Activities, and Attractions Products API](https://apis.io/apis/octo/octo-products-api/) — The Products API from Open Connectivity for Tours, Activities, and Attractions — 2 operation(s) for products.
+- [Open Connectivity for Tours, Activities, and Attractions Supplier API](https://apis.io/apis/octo/octo-supplier-api/) — The Supplier API from Open Connectivity for Tours, Activities, and Attractions — 1 operation(s) for supplier.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2024-06-07 
-- **Modified:** 2026-04-28 
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Open Connectivity for Tours, Activities, and Attractions
-OCTO API specification for connecting tours, activities, and attractions platforms with resellers and OTAs.
+Which operations an agent can call, which act, and which need a human in the loop.
 
-**Human URL:** [https://docs.octo.travel/](https://docs.octo.travel/)
+- [Octo Agentic Access](https://apis.io/agentic-access/octo/octo-agentic-access/)
 
+#### Collections (4)
 
-#### Tags:
+Postman and Open Collection request collections.
 
- - Travel, Tours, Activities
+- [Open Connectivity for Tours, Activities, and Attractions OCTO API Specification Availability API](https://apis.io/collections/octo/open-octo-availability-api/)
+- [Open Connectivity for Tours, Activities, and Attractions OCTO API Specification Availability Bookings API](https://apis.io/collections/octo/open-octo-bookings-api/)
+- [Open Connectivity for Tours, Activities, and Attractions OCTO API Specification Availability Products API](https://apis.io/collections/octo/open-octo-products-api/)
+- [Open Connectivity for Tours, Activities, and Attractions OCTO API Specification Availability Supplier API](https://apis.io/collections/octo/open-octo-supplier-api/)
 
-#### Properties
+#### Security (2)
 
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Octo Authentication](https://apis.io/security/octo/octo-authentication/)
+- [Octo Domain Security](https://apis.io/security/octo/octo-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Octo Plans Pricing](https://apis.io/plans/octo/octo-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Octo Rate Limits](https://apis.io/rate-limits/octo/octo-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Octo Finops](https://apis.io/finops/octo/octo-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.octo.travel/)
 - [Documentation](https://docs.octo.travel/)
-- [OpenAPI](openapi/octo-openapi-original.yml)
-
-## Common Properties
-
-- [Documentation](https://docs.octo.travel/)
-- [Getting Started](https://docs.octo.travel/getting-started/)
-- [Authentication](https://docs.octo.travel/getting-started/authentication)
+- [Getting started](https://docs.octo.travel/getting-started/)
 - [Support](https://docs.octo.travel/getting-started/development-support)
+- [GitHub](https://github.com/OctoConsulting)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
+**Kin Score 27.8** — thin · rubric 0.24.0 · scored 2026-10-17
 
-**Email:** kin@apievangelist.com
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 48.2 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 38.1 |
+| Access clarity | 7.9 |
+
+**Agent readiness 24.7** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | documented (partial credit) |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | verified |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/octo/](https://apis.io/providers/octo/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Open Connectivity for Tours, Activities, and Attractions: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/octo/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
